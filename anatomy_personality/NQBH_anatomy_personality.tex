@@ -1,11 +1,11 @@
-\documentclass{article}
+\documentclass[12pt]{report}
 \usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,eurosym,fancyvrb,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -23,6 +23,7 @@
 \newtheorem{hypothesis}{Hypothesis}
 \newtheorem{lemma}{Lemma}
 \newtheorem{luuy}{Lưu ý}
+\newtheorem{nguyenly}{Nguyên lý}
 \newtheorem{nhanxet}{Nhận xét}
 \newtheorem{notation}{Notation}
 \newtheorem{note}{Note}
@@ -33,7 +34,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{theorem}{Theorem}
 \newtheorem{vidu}{Ví dụ}
-\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\usepackage[margin=1cm]{geometry}
 \def\labelitemii{$\circ$}
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
@@ -65,12 +66,14 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Preface}
+\chapter{Preface}
 {\it Why ``An Attempt''?} Because I am not sure that my approach perfectly captures the theory of human personalities.
 
 \paragraph{Goals.} The author tries to describe how he tries to comprehend the theory of human personalities through definitions, examples, principles, \& maybe (psychological) theorems. This definition-example-theorem structure of any mathematical theory seems to be useful to comprehend structurally how human minds \& various human societies really work.
 
 %------------------------------------------------------------------------------%
+
+\chapter{Alfred Adler's Psychology}
 
 \section{Inferiority- \& Superiority Complexes -- Phức Cảm Hạ Đẳng \& Thượng Đẳng}
 2 khái niệm phức cảm này được nhà tâm lý học người Áo {\sc Alfred Adler} đề xuất \& nghiên cứu sâu.
@@ -82,6 +85,7 @@
 %------------------------------------------------------------------------------%
 
 \section{Power -- Quyền Lực}
+\label{sect: power}
 1 trong những điều thú vị nhất ở con người có nhận thức thấp là họ rất dễ bị thu hút bởi quyền lực. Bản thân từ ``quyền lực'' có nhiều nghĩa, mà ở đây từ này được sử dụng theo nghĩa quyền lực trong việc thích kiểm soát người khác, đặc biệt là những người họ tự giả định là yếu thế hơn hẳn hoặc mạnh hơn hẳn nhưng những người này khiến người hám quyền lực cảm thấy bị đe dọa nên phải tìm cách khống chế hoặc chèn ép cho bằng được.
 
 \begin{vidu}[Toxic colleagues -- Đồng nghiệp độc hại]
@@ -101,10 +105,73 @@
 \end{vidu}
 Điểm chung ở đây là thang quyền lực bị bẻ cong, nghiêng ngược về những người ham thích quyền lực.
 
+{\color{red}
+{\bf[FIX TONE OF WRITING STYLE]}
+\begin{itemize}
+	\item Mở đầu bằng một phong cách học thuật, khách quan và mang tính nghiên cứu. Tuy nhiên, khi đi vào các ví dụ, giọng văn đột ngột chuyển sang trạng thái bộc phát cảm xúc cá nhân, mang nhiều tính định kiến và sử dụng từ ngữ khá nặng nề (colloquial/loaded terms).
+	
+	Dẫn chứng: Việc đưa các từ lóng mạng xã hội hoặc từ ngữ mang tính nhãn mác như ``ngáo quyền'' , ``Karen'' , ``thằng đàn ông có tính đàn bà'' , ``bọn ghen ăn tức ở''  vào một văn bản đang cố gắng định hình theo format Toán - Triết sẽ làm giảm đi tính khách quan và độ uy tín (credibility) của tác giả. Người đọc có thể cảm thấy tác giả đang ``vạch trần'' hoặc ``trút giận'' hơn là đang phân tích khoa học.
+	
+	[SOL]: Chuyển đổi các từ ngữ mang tính phán xét này thành các thuật ngữ tâm lý hoặc hành vi học mang tính trung dung hơn. Ví dụ: Thay vì ``thằng đàn ông có tính đàn bà'', bạn có thể dùng ``nam giới có xu hướng hành vi tiểu tiết, ái kỷ và thiếu bao dung''.	
+	\item Mặc dù ở phần Preface bạn đặt mục tiêu hiểu nhân cách qua định nghĩa, ví dụ và định lý , nhưng xuyên suốt văn bản hiện tại mới chỉ xuất hiện Định nghĩa 1 và liên tiếp 12 Ví dụ.
+	
+	Điều này khiến cấu trúc bị lệch cân bằng. Bản thảo hiện tại giống như một ``tập hợp các case study'' (nhật ký quan sát xã hội) hơn là một hệ thống lý thuyết nhân cách.
+	
+	Giải pháp: Sau mỗi nhóm ví dụ, bạn cần đúc kết ra một Principle (Nguyên lý) hoặc Theorem (Định lý) bằng ngôn ngữ logic. Ví dụ, từ hiện tượng ``bỏng nóng/bỏng lạnh'' ở Mục 2, bạn hoàn toàn có thể khái quát thành một định lý về sự bảo toàn năng lượng tiêu cực trong cấu trúc nhân cách chưa trưởng thành.
+	\item Sự phân hóa giàu nghèo ở Mục 5: Đoạn ``Trong khi con nhà giàu từ nhỏ thường được cha mẹ dạy... rằng mọi người nghèo và yếu thế hơn phải phục vụ chúng''  là một sự khái quát hóa quá đà (overgeneralization). Lối viết này mang tính định kiến xã hội khá nặng, cần được diễn đạt một cách cẩn trọng hơn dưới góc độ phân tích phân tầng xã hội (social stratification).
+\end{itemize}
+}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Viktor Emil Frankl's Psychology}
+
+%------------------------------------------------------------------------------%
+
+\section{Existential Crisis \& Existential Vacuum -- Khủng Hoảng Hiện Sinh \& Khoảng Không Hiện Sinh}
+\label{sect: existential crisis}
+Tiếp nối góc nhìn của {\sc Alfred Adler} về động lực tìm kiếm quyền lực ngoại tại để khỏa lấp lỗ hổng tự ti, {\sc Viktor E. Frankl} mang đến 1 chiều kích câu hơn về cấu trúc nội tâm: Động lực tối thượng của con người không phải là khoái lạc (pleasure principle) hay quyền lực (power principle) như đã bàn ở mục \ref{sect: power}, mà là {\it ý chí hướng đến ý nghĩa} (will to meaning). Khi ý chí này của 1 người bị chặn đứng, thậm chí bị triệt tiêu, hệ thống tâm lý của người đó sẽ rơi vào trạng thái rỗng tuếch mang tên {\it khoảng không hiện sinh} (existential vacuum).
+
+\begin{dinhnghia}[Khoảng không hiện sinh \& khủng hoảng hiện sinh]
+	Gọi ${\cal S}_{\rm inner}(P,t)$ là không gian trạng thái nội tại của 1 cá nhân $P\in{\cal U}_{\rm human}$ tại thời điểm $t\in\mathbb{R}_{\ge0}$. Giả sử tồn tại 1 hàm mục tiêu nội tại của $P$ tại thời điểm $t$, $M(P,t):{\cal S}_{\rm inner}(P,t)\to\mathbb{R}_{\ge0}$ biểu thị \emph{chỉ số ý nghĩa (meaning index)} của cuộc sống cá nhân của $P$.
+	
+	Trạng thái \emph{khoảng không hiện sinh (existential vacuum)} xảy ra tại thời điểm $t_0\in\mathbb{R}_{\ge0}$ khi 1 cá nhân đạt được các tối ưu cục bộ về mặt ngoại tại (e.g., vật chất, danh vọng, hoặc quyền lực kiểm soát), nhưng giá trị của hàm mục tiêu ý nghĩa nội tại lại tiệm cận về $0$:
+	\begin{equation*}
+		\lim_{t\nearrow t_0} M(P,t)(s_t)\searrow0.
+	\end{equation*}
+	\emph{Khủng hoảng hiện sinh (existential crisis)} là 1 chuỗi các trạng thái mất ổn định của hệ thống (system instability) khi thuật toán định tuyến hành vi của cá nhân không tìm thấy gradient tăng trưởng (độc dốc tăng) của hàm $M(P,t)(s_t)$. Sự mất phương hướng này dẫn đến hiện tượng sụp đổ động lực (motivation collapse) hoặc sinh ra các vòng lặp vô tận (infinite loops), do thiếu điều kiện, tiêu chí, hay cơ chế dừng (stopping criteria) của vòng lặp suy tư, của sự hoài nghi sâu sắc về sự tồn tại \& ý nghĩa của sự tồn tại của cá nhân $P$.
+\end{dinhnghia}
+
+\begin{vidu}[Sự bế tắc của các cỗ máy tối ưu hóa ngoại tại]
+	1 nghiên cứu sinh PhD xuất sắc hoặc 1 lập trình viên xuất chúng, gọi là $P\in{\cal U}_{\rm human}$, dành toàn bộ tài nguyên năng lượng để tối ưu hóa các tham số ngoại tại (outer parameters), e.g., bài báo Q1, chỉ số h-index, mức lương nghìn \$ hay nghìn \euro, sự công nhận của nhóm nghiên cứu (research group) hay của tổ chức. Cá nhân $P$ này giả định rằng việc cực đại hóa các biến số này sẽ tự động làm tăng giá trị của hàm hạnh phúc tổng thể (total happiness function).
+	
+	Tuy nhiên, ngay khi chạm đến điểm tối ưu của hệ thống ngoại tại (global optimum of the outer system), cá nhân $P$ đột ngột nhận ra toàn bộ hệ thống phần thưởng đó trơ trọi \& không thể trả về bất kỳ 1 đơn vị ý nghĩa nào (meaning unit). Đối diện với 1 khoảng không hiện sinh vào lúc 1:00--6:00 sáng, sau 1 trong những đêm liền mất ngủ, khi không còn task nào để làm, hệ thống nội tại của $P$ sẽ có xu hướng rơi vào khủng hoảng hiện sinh với xác suất rất cao. Để trốn tránh, $P$, \& những cá thể đồng cảnh ngộ, thường rơi vào 2 xu hướng hành vi chính: hoặc là ``quá khớp'' (overfitting) vào các thú vui ngắn hạn để gây nhiễu tín hiệu, làm tê liệt chức năng nhận thức để bớt cảm nhận thực tại; hoặc tìm kiếm các quyền lực độc hại, chèn ép người yếu thế hơn để tìm lại cảm giác ``mình có tiếng nói \& có quyền lực'', khi đó họ lại leo lên buồng xông hơi cấp tốc để trải nghiệm cảm giác bỏng nóng \& bỏng lại xen kẽ đầy tính hủy hoại từ bên trong, trong đó hệ thống tâm lý có lẽ chịu ảnh hưởng nặng nhất.
+\end{vidu}
+
+\begin{nguyenly}[Sự bù trù dòng năng lượng hiện sinh]
+	Khi hàm mục tiêu $M(P,t)(s_t)$ bị bỏ đói trong 1 thời gian đủ dài, i.e., $M(P,t)(s_t)\approx0$, $\forall t\in[t_{\rm start},t_{curr}]$ với $t_{curr} - t_{\rm start}\ge\Delta t_{\rm threshold}$, hệ thống tâm lý có xu hướng tự động kích hoạt cơ chế bù trừ năng lựng (compensatory mechanism). Cá nhân $P$ sẽ chuyển hướng dòng tài nguyên cá nhân (personal inner resource) sang các hàm mục tiêu cấp thấp hơn dễ tối ưu hơn: Khoái lạc hoặc quyền lực ngoại tại.
+	
+	1 hệ quả hiển nhiên là: Khi con người càng thiếu lý do để sống, để có thể dám tiếp tục sống, họ càng dễ bị ám ảnh bởi tiền bạc, tốc độ, danh vọng hoặc ham muốn kiểm soát người khác 1 cách cực đoan, thường thông qua thao túng tâm lý bằng cách lợi dụng khéo léo tâm lý học đám đông để tấn công con mồi.
+\end{nguyenly}
+
+\begin{principle}[Zero-sum game of existential energy of a human being]
+	
+\end{principle}
+
+
+
+%------------------------------------------------------------------------------%
+
+
+
+%------------------------------------------------------------------------------%
+
+\chapter{A Collection of Psychological Puzzles}
+
 %------------------------------------------------------------------------------%
 
 \section{Highly Sensitive Person (HSP) -- Người Nhạy Cảm Cao}
-Tính cách nhạy cảm cao (highly sensitive personality) như 1 con dao 2 lưỡi đúng nghĩa. Người sở hữu tính cách này có cảm nhận về mặt tâm lý trải dài trên 1 phổ suy nghĩ \& hành vi tương đối rộng. Để mô tả phổ hành vì này, có thể hiểu rằng ở mặt này của phổ đó, người nhạy cảm theo xu hướng ngu dốt \& ích kỷ thường dễ phát sinh tính ái kỷ (narcissism), độc đoán, thích điều khiển, thao túng người khác. Nếu là nữ giới thì thường được biết đến tên gọi Karen. Còn nam giới có tính nhạy cảm theo chiều hướng ngu dốt \& ích kỷ thường được biết đến với tên gọi thằng đàn ông ``có tính đàn bà''. Trong khi ở cực kia của phổ hành vi, nếu người nhạy cảm cao sở hữu thêm khả năng quan sát cao, cùng 1 thói quen chiêm nghiệm các trải nghiệm của mình, thì họ thường dễ phát triển chỉ số thông minh cảm xúc EQ cao, mà thường dễ hòa nhập với những người mà họ cho là xứng đáng, chưa kể đến khả năng trở thành 1 lãnh đạo tốt.
+Tính cách nhạy cảm cao (highly sensitive personality) như 1 con dao 2 lưỡi đúng nghĩa. Người sở hữu tính cách này có cảm nhận về mặt tâm lý trải dài trên 1 phổ suy nghĩ \& hành vi tương đối rộng. Để mô tả phổ hành vi này, có thể hiểu rằng ở mặt này của phổ đó, người nhạy cảm theo xu hướng ngu dốt \& ích kỷ thường dễ phát sinh tính ái kỷ (narcissism), độc đoán, thích điều khiển, thao túng người khác. Nếu là nữ giới thì thường được biết đến tên gọi Karen. Còn nam giới có tính nhạy cảm theo chiều hướng ngu dốt \& ích kỷ thường được biết đến với tên gọi thằng đàn ông ``có tính đàn bà''. Trong khi ở cực kia của phổ hành vi, nếu người nhạy cảm cao sở hữu thêm khả năng quan sát cao, cùng 1 thói quen chiêm nghiệm các trải nghiệm của mình, thì họ thường dễ phát triển chỉ số thông minh cảm xúc EQ cao, mà thường dễ hòa nhập với những người mà họ cho là xứng đáng, chưa kể đến khả năng trở thành 1 lãnh đạo tốt.
 
 %------------------------------------------------------------------------------%
 
@@ -145,7 +212,7 @@ Có 1 thời điểm nào đó bạn nhận ra việc khoe khoang trên (các) t
 
 %------------------------------------------------------------------------------%
 
-\section{Integerity -- Tính Chính Trực}
+\section{Integrity -- Tính Chính Trực}
 
 \begin{vidu}
 	1 người chính trực, ngay khi đã biết cả đời này có thể sẽ (phải) sống dưới tiềm năng của mình, vẫn phải làm đúng trong mọi tình huống, đặc biệt là khi làm việc với những người có nhận thức thấp hơn \& yếu thế hơn, để xã hội bớt trở nên xấu xí hơn \& hỗn loạn hơn.
