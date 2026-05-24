@@ -34,10 +34,10 @@ struct Outer_System { // PhD, coder, programmer & the like
 // định nghĩa các trạng thái ổn định/mất ổn định của hệ thống tâm lý
 enum class System_Status {
 	STABLE,
-    EXISTENTIAL_VACUUM, // khoảng không hiện sinh (existential vacuum)
-    EXISTENTIAL_CRISIS, // khủng hoảng hiện sinh (vòng lặp vô hạn/sụp đổ động lực) (existential crisis/motivation collapse)
-    OVERFITTING_PLEASURE, // quá khớp (overfitting) vào thú vui ngắn hạn (Gây nhiễu tín hiệu)
-    TOXIC_POWER_COMPENSATION // bù trừ bằng cách kiểm soát độc hại (quay lại Chap. Adler, Sect. power): zero-sum game of existential energy of a human being
+	EXISTENTIAL_VACUUM, // khoảng không hiện sinh (existential vacuum)
+	EXISTENTIAL_CRISIS, // khủng hoảng hiện sinh (vòng lặp vô hạn/sụp đổ động lực) (existential crisis/motivation collapse)
+	OVERFITTING_PLEASURE, // quá khớp (overfitting) vào thú vui ngắn hạn (Gây nhiễu tín hiệu)
+	TOXIC_POWER_COMPENSATION // bù trừ bằng cách kiểm soát độc hại (quay lại Chap. Adler, Sect. power): zero-sum game of existential energy of a human being
 };
 
 // lớp đại diện cho cá nhân P thuộc U_human: universe set of all human beings: possibly extend to animals & their psychology?
@@ -76,7 +76,7 @@ public:
 		double simulated_awareness = s_t.self_awareness + step;
 		double simulated_intrinsic = simulated_awareness * s_t.connection_depth * s_t.intrinsic_value;
 		double M_simulated = simulated_intrinsic / (1.0 + outer_score_coeff * outer_system.evaluate_outer_optimum());
-	
+
 		// gradient = dM / d(awareness): maybe Python JAX's autograd better here
 		return (M_simulated - M_current) / step;
 	}
@@ -92,13 +92,101 @@ public:
 		s_t.self_awareness *= 0.7; // suy giảm khả năng tự nhận thức, tự tỉnh thức: (hyper-)parameterize this constant
 	}
 
-	// WORKING HERE
+	// kích hoạt Nguyên lý: Cơ chế bù trừ dòng năng lượng hiện sinh (compensatory mechanism)
+	void apply_compensatory_mechanism() {
+		std::cout << "\n[CRITICAL ALERT] P = " << identifier << " bế tắc năng lượng vượt ngưỡng Delta T_{threshold}: Kích hoạt Nguyên lý Compensatory Mechanism.\n";
+
+		if (s_t.self_awareness < 0.5) {
+			// nhập thức đủ thấp => overfitting vào thú vui ngắn hạn để gây nhiễu hệ thống nhận thức
+			status = System_Status::OVERFITTING_PLEASURE;
+			std::cout << "=> Định tuyến thất bại: Hệ thống chọn OVERFITTING vào khoái lạc ngắn hạn\n";
+		} else {
+			// nhận thức cao hơn nhưng mất định hướng => Chiếm đoạt quyền lực ngoại tại để bù đắp (from Adlerian psychology)
+			status = System_Status::TOXIC_POWER_COMPENSATION;
+			outer_system.control_over_power += 50.0;
+			std::cout << "=> Định tuyến thất bại: Chuyển dịch tài nguyên sang kiểm soát/chèn ép người khác.\nHệ thống rơi vào chu kỳ bỏng nóng / bỏng lạnh liên tiếp.\n";
+		}
+	}
+	// cập nhật trạng thái hệ thống theo bước thời gian dt
+	void update_system_state(double dt) {
+		current_time += dt;
+		double M = compute_meaning_index(), gradient = calculate_meaning_gradient(), outer_score = outer_system.evaluate_outer_optimum();
+
+		// kiểm tra trạng thái khoảng không hiện sinh (existential vacuum): đạt tối ưu ngoại tại nhưng M(P, t)(s_t) tiệm cận về 0
+		if (outer_score > 50.0 && M < meaning_epsilon)
+			if (status == System_Status::STABLE) status = System_Status::EXISTENTIAL_VACUUM;
+
+		// kiểm tra trạng thái khủng hoảng hiện sinh (Existential Crisis)
+		// thuật toán định tuyến không tìm thấy gradient tăng trưởng, i.e., gradient <= 0
+		if (status == System_Status::EXISTENTIAL_VACUUM && gradient <= 0.0) status = System_Status::EXISTENTIAL_CRISIS;
+
+		// theo dõi thời gian bị ``đói'' ý nghĩa liên tục \forall t\in[t_start, t_curr]
+		if (M < meaning_epsilon) starved_duration += dt;
+		else starved_duration = 0.0;
+
+		// thực thi hệ quả của nguyên lý Conpensatory Mechanism nếu vượt ngưỡng thời gian quy định \Delta t_{threshold}
+		if (starved_duration >= Delta_t_threshold && status != System_Status::OVERFITTING_PLEASURE && status != System_Status::TOXIC_POWER_COMPENSATION) apply_compensatory_mechanism();
+	}
+
+	void print_telemetry() const {
+		std::cout << "========================================================\nTelemetry for person P: " << identifier << " | Time t = " << current_time << '\n';
+		s_t.display();
+		outer_system.display();
+		std::cout << "Meaning Index M(P, t)(s_t) = " << compute_meaning_index() << "\nSystem Status: ";
+		switch (status) {
+		case System_Status::STABLE: std::cout << "STABLE\n"; break;
+		case System_Status::EXISTENTIAL_VACUUM: std::cout << "EXISTENTIAL_VACUUM (Khoảng không hiện sinh)\n"; break;
+		case System_Status::EXISTENTIAL_CRISIS: std::cout << "EXISTENTIAL_CRISIS (Infinite Loop / No Gradient)\n"; break;
+		case System_Status::OVERFITTING_PLEASURE: std::cout << "OVERFITTING_PLEASURE (Gây nhiễu tín hiệu)\n"; break;
+		case System_Status::TOXIC_POWER_COMPENSATION: std::cout << "TOXIC_POWER_COMPENSATION (Adlerian Toxic Power)\n"; break;
+		}
+		std::cout << "========================================================\n";
+	}
 };
 
 int main() {
-	std::cout << "BASIC FRAMEWORK\n";
+	// ============================================================================
+	// BASIC FRAMEWORK
+	// ============================================================================
+		std::cout << "BASIC FRAMEWORK\n";
 
+	// khởi tạo thực thể nghiên cứu sinh PhD/coder/programmer P với cấu trúc nội tâm ban đầu cân bằng
+	Inner_State initial_inner{1.2, 1.0, 1.5};
+	Outer_System initial_outer{0, 0, 1000.0, 0};
+
+	Human PhD_student ("NQBH [25, PhD student]", initial_inner, initial_outer);
+	std::cout << "--- Trạng thái ban đầu (Initial State) ---\n";
+	PhD_student.print_telemetry();
+
+	// giả lập chuỗi hành vi: tối ưu hóa điên cuồng các tham số ngoại tại, e.g., quên cả bạn gái giỏi thay lòng & skip mấy con trap girls ái kỷ
+	std::cout << "\n>>> Thực hiện thuật toán tối ưu ngoại tại: Cày bài báo Q1, tăng h-index...\n";
+	PhD_student.optimzie_outer_parameters(5.0, 12.0, 5000.0); // đạt global optimum của hệ thống ngoài
+
+	// chạy mô phỏng dòng thời gian để kiểm tra sự mất ổn định của hệ thống
+	for (int step = 1; step <= 6; ++step) { // đang mô phỏng quá trình AI, thông qua cơ chế  Trí thông minh cá nhân-- Cá nhân hoá cuộc trò chuyện khi cần thiết   bắt chước style suy luận từ Bachelor Thesis of Nguyễn Ngọc Thạch
+		PhD_student.update_system_state(1.0); // mỗi bước thời gian dt = 1.0
+		if (step == 1 || step == 3 || step == 6) {
+			std::cout << "\n--- Bước mô phỏng t = " << step << " ---";
+			PhD_student.print_telemetry();
+		}
+	}
+
+	// ============================================================================
+	// ADVANCED FRAMEWORK
+	// ============================================================================
 	std::cout << "ADVANCED FRAMEWORK\n";
 
+	// ============================================================================
+	// PARALLELIZATION FRAMEWORK
+	// ============================================================================
 	std::cout << "PARALLELIZATION FRAMEWORK\n";
+
 }
+
+/*
+compilation:
+g++ -O3 -Wall -march=native -fopenmp -std=c++26 -I /usr/include/eigen3 NQBH_anatomy_personality.cpp -o NQBH_anatomy_personality
+time ./NQBH_anatomy_personality
+
+[addinng] use mpirun & MP flags for PARALLELIZATION FRAMEWORK later
+*/
