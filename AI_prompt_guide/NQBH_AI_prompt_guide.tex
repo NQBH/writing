@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass{article}
 \usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -29,6 +29,7 @@
 \newtheorem{note}{Note}
 \newtheorem{principle}{Principle}
 \newtheorem{problem}{Problem}
+\newtheorem{prompt}{Prompt}
 \newtheorem{proposition}{Proposition}
 \newtheorem{question}{Question}
 \newtheorem{remark}{Remark}
@@ -42,35 +43,88 @@
 \setlist[itemize]{leftmargin=*}
 \setlist[enumerate]{leftmargin=*}
 
-\title{How to Prompt AI: An ``AI-Guided Personal'' Guide\\Cách Xài AI: 1 Hướng Dẫn Cá Nhân Được AIs Hướng Dẫn}
+\title{How to Prompt AI: An ``AI-Guided Personal'' Guide of How to Prompt AIs\\Cách Xài AI: 1 Hướng Dẫn Cá Nhân về Cách Sử Dụng AI Được Chính AIs Hướng Dẫn}
 \author{Nguyễn Quản Bá Hồng\footnote{A scientist- {\it\&} creative artist wannabe.\\E-mail: {\sf nguyenquanbahong@gmail.com}. Website: \url{https://nqbh.github.io/}. GitHub: \url{https://github.com/NQBH}.}}
 \date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-	This text is a part of the series {\it Some Topics in Advanced STEM \& Beyond}:
-	
-	{\sc url}: \url{https://nqbh.github.io/advanced_STEM/}.
+	Trong bài viết này, tôi muốn tổng hợp 1 số điều, cũng như kinh nghiệm cá nhân về việc prompt AI trong thời đại các AI models phát triển với tốc độ vũ bão hiện nay.
 	
 	Latest version:
 	\begin{itemize}
-		\item {\it How to Prompt AI: An ``AI-Guided Personal'' Guide\\Cách Xài AI: 1 Hướng Dẫn Cá Nhân Được AIs Hướng Dẫn}.
+		\item {\it How to Prompt AI: An ``AI-Guided Personal'' Guide of How to Prompt AIs\\Cách Xài AI: 1 Hướng Dẫn Cá Nhân về Cách Sử Dụng AI Được Chính AIs Hướng Dẫn}.
 		
-		PDF: {\sc url}: \url{}.
+		PDF: {\sc url}: \url{https://github.com/NQBH/writing/blob/main/AI_prompt_guide/NQBH_AI_prompt_guide.pdf}.
 		
-		\TeX: {\sc url}: \url{}.
+		\TeX: {\sc url}: \url{https://github.com/NQBH/writing/blob/main/AI_prompt_guide/NQBH_AI_prompt_guide.tex}.
 	\end{itemize}
 \end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
-\chapter{Preface}
+\section{Preface}
+Tôi là 1 người khá chậm về công nghệ, đến khi được các em sinh viên yêu quý tống quá nhiều kiệt tác AI vào mặt thì tôi mới nhận ra tầm quan trọng của việc học cách prompt AI.
 
 %------------------------------------------------------------------------------%
 
-\chapter{Miscellaneous -- Linh Tinh}
+\section{How to Use AI Properly}
+
+Use the following double-check prompts:
+\begin{enumerate}
+	\item Detect any illogical arguments, typos, wrong math notations, frauds, math washing, over exaggerations in your polished output.
+	
+	This forces AI to admit, e.g.,
+	\begin{quotation}
+		``As a rigorous mathematical reviewer, I have meticulously audited the previous "advanced" draft I generated. Because your prompt requested to "upgrade it more advanced, discover more combinatorial identities... use probabilistic methods," the AI model fell into a classic trap: "Math-Washing"—dressing up basic combinatorial concepts with intimidating, superficially applied theorems from advanced fields (spectral theory, continuous probability, physics) to make the text look profound.
+		
+		Under strict mathematical scrutiny, the previous output contains fatal logical flaws, misapplied theorems, hallucinatory mathematics (fraud), and extreme exaggerations.
+		
+		Here is the exact, brutal breakdown of the errors, illogical arguments, and math-washing detected in the text.''
+	\end{quotation}
+\end{enumerate}
+Để cải thiện cách prompt AI, đây là câu prompt về cách prompt (meta-prompting) đầu tiên của tôi:
+\begin{prompt}
+	{\sf[NQBH, 29]:} Instruct me how to use you, Gemini Ultra to ultimate advanced level, for each mode: Flash, Pro Deep-Mode. Which types of tasks, e.g., paper work, mathematics research, i should use for which mode? \& especially how to prompt effectively, efficiently to prevent error \& achieve maximum quality of your answers?
+\end{prompt}
+\noindent{\sf[Gemini 3.5 Flash-extended]:} To extract the ultimate performance from the Gemini 3 family, you need to treat the models less like simple text generators \& more like execution engines with varying compute allocations \& specializations.
+
+The strategy comes down to matching the inherent architecture of {\sf Flash, Pro}, \& {\sf Deep Think} to the exact computational complexity of your task, while employing prompting structures that anchor the models' reasoning pathways.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|p{5cm}|p{8cm}|}
+		\hline
+		\textbf{Mode} & \textbf{Core Architecture Focus} & \textbf{Ideal Scientific \& Research Tasks} \\
+		\hline
+		Gemini 3.5 Flash & Low-latency processing, high-throughput pipelines. Optimized for structural instruction-following. & Boilerplate C++ optimization, massive data synthesis, generating rigorous unit-test suites, covering unstructured data into structured JSON{\tt/}Markdown formats. \\
+		\hline
+		Gemini 3.1 Pro & Deep multi-model grounding \& massive context window management (1M+ tokens). & Cross-reference entire book manuscripts, ingest \& comparison of multiple long-form journal papers, multi-model chart{\tt/}graph analysis, macro-level thesis reviews. \\
+		\hline
+		Gemini 3 Deep Think & Inference-time compute scaling. Natively activates iterative verification loops to self-correct reasoning paths & Olympiad-level calculus{\tt/}algebra, combinatorial optimization (e.g., posets, matroids, GNNs), discovering specific mathematical counterexamples, debugging complex synchronization anomalies (e.g., race conditions, custom mutexes). \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\paragraph{High-fidelity prompting architecture.} Gemini 3 models are highly sensitive to structure \& direct instructions. Over-engineered, verbose prompt templates designed for older generation models actually cause Gemini 3 to over-analyze \& degrade output quality.
+\begin{enumerate}
+	\item \textbf{The long-context ``anchor'' layout.} When uploading extensive context (e.g., dense mathematical frameworks, codebases, or research drafts), the order of your prompt dictates performance. Gemini 3 models process information more accurately when the data precedes the instruction.
+	
+	\textit{Bad structure}: {\tt[Instruction]} $\to$ {\tt[10,000 lines of source code/paper text]}
+	
+	\textit{Optimal structure}: {\tt[Data/Context Block] $\to$ [Transition Anchor] $\to$ [Precise Direct Instructions]}
+	
+	Example Transition Anchor: ``Based on the mathematical framework \& data provided above, execute the following task with absolute rigor \ldots''
+\end{enumerate}
+
+\begin{prompt}
+	Survey, research, synthesize how Terence Tao has been pioneering the use of AI in professional mathematics research. Focus on his strategies, qualities of prompts, etc. 
+\end{prompt}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous -- Linh Tinh}
 
 %------------------------------------------------------------------------------%
 
