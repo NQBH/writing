@@ -35,7 +35,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{theorem}{Theorem}
 \newtheorem{vidu}{Ví dụ}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1.61803398875cm]{geometry} % golden ratio \varphi = 1.61803398875
 \def\labelitemii{$\circ$}
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
@@ -73,32 +73,51 @@ Tôi là 1 người khá chậm về công nghệ, đến khi được các em s
 \section{How to Use AI Properly}
 
 Use the following double-check prompts:
+
+Sử dụng các prompt kiểm tra chéo (double-check) sau đây:
 \begin{enumerate}
 	\item Detect any illogical arguments, typos, wrong math notations, frauds, math washing, over exaggerations in your polished output.
 	
+	Hãy phát hiện bất kỳ lập luận thiếu logic, lỗi đánh máy, ký hiệu toán học sai lệch, sự gian lận, "math-washing" (lạm dụng toán học) hay sự phóng đại thái quá nào trong kết quả đã được trau chuốt của bạn.
+	
 	This forces AI to admit, e.g.,
+	
+	Điều này buộc AI phải thừa nhận, ví dụ như:
 	\begin{quotation}
 		``As a rigorous mathematical reviewer, I have meticulously audited the previous "advanced" draft I generated. Because your prompt requested to "upgrade it more advanced, discover more combinatorial identities... use probabilistic methods," the AI model fell into a classic trap: "Math-Washing"—dressing up basic combinatorial concepts with intimidating, superficially applied theorems from advanced fields (spectral theory, continuous probability, physics) to make the text look profound.
 		
+		"Với tư cách là một người phản biện toán học khắt khe, tôi đã kiểm tra tỉ mỉ bản thảo 'nâng cao' trước đó mà tôi vừa tạo ra. Bởi vì yêu cầu của bạn là 'nâng cấp nó lên mức độ cao cấp hơn, khám phá thêm các đồng nhất thức tổ hợp... sử dụng phương pháp xác suất', mô hình AI đã rơi vào một cái bẫy kinh điển: 'Math-Washing' (Lạm dụng toán học) — việc khoác lên các khái niệm tổ hợp cơ bản những định lý đao to búa lớn, được áp dụng một cách hời hợt từ các lĩnh vực chuyên sâu (lý thuyết phổ, xác suất liên tục, vật lý) nhằm làm cho văn bản có vẻ uyên thâm.
+		
 		Under strict mathematical scrutiny, the previous output contains fatal logical flaws, misapplied theorems, hallucinatory mathematics (fraud), and extreme exaggerations.
 		
+		Dưới sự giám sát toán học nghiêm ngặt, kết quả trước đó chứa những lỗ hổng logic chí mạng, các định lý bị áp dụng sai lệch, toán học ảo giác (sự gian lận) và những sự phóng đại tột độ.
+		
 		Here is the exact, brutal breakdown of the errors, illogical arguments, and math-washing detected in the text.''
+		
+		Dưới đây là sự phân tích chính xác, trần trụi về các lỗi, những lập luận thiếu logic và hiện tượng lạm dụng toán học được phát hiện trong văn bản."
 	\end{quotation}
 \end{enumerate}
 Để cải thiện cách prompt AI, đây là câu prompt về cách prompt (meta-prompting) đầu tiên của tôi:
 \begin{prompt}
-	{\sf[NQBH, 29]:} Instruct me how to use you, Gemini Ultra to ultimate advanced level, for each mode: Flash, Pro Deep-Mode. Which types of tasks, e.g., paper work, mathematics research, i should use for which mode? \& especially how to prompt effectively, efficiently to prevent error \& achieve maximum quality of your answers?
+	\label{promt: how to prompt Gemini}
+	{\sf[NQBH, 29]:} Instruct me how to use you, Gemini Ultra to ultimate advanced level, for each mode: Flash, Pro Deep-Mode. Which types of tasks, e.g., paper work, mathematics research, I should use for which mode? \& especially how to prompt effectively, efficiently to prevent error \& achieve maximum quality of your answers?
+	
+	{\sf[NQBH, 29]:} Hãy hướng dẫn tôi cách sử dụng bạn, Gemini Ultra, ở mức độ nâng cao tối thượng nhất cho từng chế độ: Flash, Pro Deep-Mode. Tôi nên sử dụng chế độ nào cho những loại tác vụ nào, ví dụ như viết bài báo khoa học hay nghiên cứu toán học? \& đặc biệt là làm thế nào để viết prompt một cách hiệu quả, tối ưu nhằm ngăn chặn lỗi \& đạt được chất lượng tối đa trong các câu trả lời của bạn?
 \end{prompt}
-\noindent{\sf[Gemini 3.5 Flash-extended]:} To extract the ultimate performance from the Gemini 3 family, you need to treat the models less like simple text generators \& more like execution engines with varying compute allocations \& specializations.
+\noindent{\sf[Gemini 3.5 Flash-extended]}'s answer on Prompt \ref{promt: how to prompt Gemini}: To extract the ultimate performance from the Gemini 3 family, you need to treat the models less like simple text generators \& more like execution engines with varying compute allocations \& specializations.
+
+\noindent Câu trả lời của {\sf[Gemini 3.5 Flash-extended]} cho Prompt \ref{promt: how to prompt Gemini}: Để khai thác hiệu suất tối thượng từ thế hệ Gemini 3, bạn cần xem các mô hình này không đơn thuần là những công cụ tạo văn bản, mà giống như các công cụ thực thi (execution engines) với sự phân bổ năng lực tính toán và mức độ chuyên môn hóa khác nhau.
 
 The strategy comes down to matching the inherent architecture of {\sf Flash, Pro}, \& {\sf Deep Think} to the exact computational complexity of your task, while employing prompting structures that anchor the models' reasoning pathways.
+
+Chiến lược ở đây cốt lõi là việc kết hợp kiến trúc nội tại của {\sf Flash, Pro}, \& {\sf Deep Think} với độ phức tạp tính toán chính xác của bài toán mà bạn đặt ra, đồng thời sử dụng các cấu trúc prompt có khả năng neo giữ các luồng suy luận của mô hình.
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|p{5cm}|p{8cm}|}
+	\begin{tabular}{|p{2cm}|p{5.5cm}|p{10cm}|}
 		\hline
 		\textbf{Mode} & \textbf{Core Architecture Focus} & \textbf{Ideal Scientific \& Research Tasks} \\
 		\hline
-		Gemini 3.5 Flash & Low-latency processing, high-throughput pipelines. Optimized for structural instruction-following. & Boilerplate C++ optimization, massive data synthesis, generating rigorous unit-test suites, covering unstructured data into structured JSON{\tt/}Markdown formats. \\
+		Gemini 3.5 Flash & Low-latency processing, high-throughput pipelines. Optimized for structural instruction-following. & Boilerplate C++ optimization, massive data synthesis, generating rigorous unit-test suites, converting unstructured data into structured JSON{\tt/}Markdown formats. \\
 		\hline
 		Gemini 3.1 Pro & Deep multi-model grounding \& massive context window management (1M+ tokens). & Cross-reference entire book manuscripts, ingest \& comparison of multiple long-form journal papers, multi-model chart{\tt/}graph analysis, macro-level thesis reviews. \\
 		\hline
@@ -107,20 +126,267 @@ The strategy comes down to matching the inherent architecture of {\sf Flash, Pro
 	\end{tabular}
 \end{table}
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{2cm}|p{5.5cm}|p{10cm}|}
+		\hline
+		\textbf{Chế độ} & \textbf{Trọng tâm kiến trúc cốt lõi} & \textbf{Các tác vụ Nghiên cứu \& Khoa học lý tưởng} \\
+		\hline
+		Gemini 3.5 Flash & Xử lý độ trễ thấp, các luồng dữ liệu thông lượng cao. Được tối ưu hóa cho việc tuân thủ các chỉ thị có cấu trúc. & Tối ưu hóa mã C++ soạn sẵn (boilerplate), tổng hợp dữ liệu quy mô lớn, tạo các bộ kiểm thử phần mềm (unit-test) chặt chẽ, chuyển đổi dữ liệu phi cấu trúc sang định dạng JSON{\tt/}Markdown có cấu trúc. \\
+		\hline
+		Gemini 3.1 Pro & Nền tảng đa mô hình chuyên sâu \& quản lý cửa sổ ngữ cảnh khổng lồ (hơn 1 triệu tokens). & Tham chiếu chéo toàn bộ bản thảo sách, tiếp nhận \& đối chiếu nhiều bài báo khoa học định dạng dài, phân tích biểu đồ{\tt/}đồ thị đa mô hình, đánh giá luận án ở cấp độ vĩ mô. \\
+		\hline
+		Gemini 3 Deep Think & Mở rộng quy mô tính toán trong thời gian suy luận (inference-time compute scaling). Tự động kích hoạt các vòng lặp xác minh lặp đi lặp lại để tự điều chỉnh các luồng suy luận. & Giải tích{\tt/}Đại số cấp độ thi Olympic, tối ưu hóa tổ hợp (ví dụ: tập hợp sắp thứ tự bộ phận (posets), matroids, mạng nơ-ron đồ thị (GNNs)), khám phá các phản ví dụ toán học cụ thể, gỡ lỗi các dị thường đồng bộ hóa phức tạp (ví dụ: race conditions, custom mutexes). \\
+		\hline
+	\end{tabular}
+\end{table}
+
 \paragraph{High-fidelity prompting architecture.} Gemini 3 models are highly sensitive to structure \& direct instructions. Over-engineered, verbose prompt templates designed for older generation models actually cause Gemini 3 to over-analyze \& degrade output quality.
+
+\paragraph{Kiến trúc prompt với độ trung thực cao.} Các mô hình Gemini 3 cực kỳ nhạy cảm với cấu trúc \& các chỉ thị trực tiếp. Những mẫu prompt quá cầu kỳ, rườm rà vốn được thiết kế cho các thế hệ mô hình cũ thực chất lại khiến Gemini 3 phân tích thái quá \& làm giảm chất lượng đầu ra.
 \begin{enumerate}
 	\item \textbf{The long-context ``anchor'' layout.} When uploading extensive context (e.g., dense mathematical frameworks, codebases, or research drafts), the order of your prompt dictates performance. Gemini 3 models process information more accurately when the data precedes the instruction.
 	
+	\textbf{Bố cục "neo" ngữ cảnh dài.} Khi tải lên lượng ngữ cảnh bao quát (ví dụ: các khuôn khổ toán học dày đặc, cơ sở mã code, hoặc các bản thảo nghiên cứu), trật tự của prompt sẽ quyết định hiệu suất. Các mô hình Gemini 3 xử lý thông tin chính xác hơn khi dữ liệu được đặt trước chỉ thị.
+	
 	\textit{Bad structure}: {\tt[Instruction]} $\to$ {\tt[10,000 lines of source code/paper text]}
+	
+	\textit{Cấu trúc tồi}: {\tt[Chỉ thị]} $\to$ {\tt[10.000 dòng mã nguồn/văn bản bài báo]}
 	
 	\textit{Optimal structure}: {\tt[Data/Context Block] $\to$ [Transition Anchor] $\to$ [Precise Direct Instructions]}
 	
+	\textit{Cấu trúc tối ưu}: {\tt[Khối Dữ liệu/Ngữ cảnh] $\to$ [Neo Chuyển tiếp] $\to$ [Chỉ thị Trực tiếp Chính xác]}
+	
 	Example Transition Anchor: ``Based on the mathematical framework \& data provided above, execute the following task with absolute rigor \ldots''
+	
+	Ví dụ về Neo Chuyển tiếp: "Dựa trên khuôn khổ toán học \& dữ liệu được cung cấp ở trên, hãy thực hiện tác vụ sau với sự chặt chẽ tuyệt đối \ldots"
+	\item \textbf{Balanced prompting (neutralizing confirmation basis).} When pushing Deep Think to validate complex logical statements or new theoretical assertions, avoid leading questions. If you ask the model to ``prove'' something, it may bias its internal reasoning path toward validation, overlooking subtle flaws.
+	
+	\textbf{Prompt cân bằng (triệt tiêu thiên kiến xác nhận).} Khi thúc đẩy Deep Think để xác minh các mệnh đề logic phức tạp hoặc các khẳng định lý thuyết mới, hãy tránh các câu hỏi mang tính dẫn dắt. Nếu bạn yêu cầu mô hình "chứng minh" một điều gì đó, điều này có thể làm thiên lệch luồng suy luận nội tại của nó theo hướng xác nhận, dẫn đến việc bỏ qua các lỗ hổng tinh vi.
+	
+	\textit{Biased}: ``Prove that the fractional finite-difference operator holds under constraint $C$.''
+	
+	\textit{Thiên kiến}: "Chứng minh rằng toán tử sai phân hữu hạn cấp phân số thỏa mãn dưới ràng buộc $C$."
+	
+	\textit{Balanced}: ``Evaluate the validity of the finite-difference operator under constraint $C$. Simultaneously attempt to construct a formal proof of the assertion \& engineer a minimal, specific counterexample to refute it. Present whichever pathway yields absolute mathematical consistency.''
+	
+	\textit{Cân bằng}: "Đánh giá tính hợp lệ của toán tử sai phân hữu hạn dưới ràng buộc $C$. Đồng thời nỗ lực xây dựng một chứng minh hình thức cho khẳng định này \& thiết kế một phản ví dụ cụ thể, tối giản để bác bỏ nó. Hãy trình bày bất kỳ hướng đi nào mang lại sự nhất quán toán học tuyệt đối."
+	\item \textbf{Exploiting the internal sandbox via code-assisted verification.} For advanced math \& data science tasks, do not rely on raw text probability for numerical outputs or symbolic transformations. Force the model to leverage its code execution environment to verify its own logic before rendering the final response.
+	
+	\textbf{Khai thác hộp cát (sandbox) nội bộ thông qua việc xác minh bằng hỗ trợ mã lệnh.} Đối với các tác vụ khoa học dữ liệu \& toán học cấp cao, đừng phụ thuộc vào xác suất văn bản thô cho các kết quả đầu ra dạng số hoặc các phép biến đổi ký hiệu. Hãy buộc mô hình phải tận dụng môi trường thực thi mã lệnh của nó để tự xác minh logic trước khi kết xuất câu trả lời cuối cùng.
+	
+	\textit{Markdown}:
+	\begin{verbatim}
+[Your Task Description]
+...
+Before presenting your final response, execute a Python script in your sandbox to numerically
+verify the assertion for a diverse test suite of edge cases (e.g., bounds, empty states, negative
+coordinates). Output the execution logs and use those results to refine your formal conclusion.
+	\end{verbatim}
+	
+	\textit{Bản dịch Markdown}:
+	\begin{verbatim}
+[Mô tả Tác vụ của Bạn]
+...
+Trước khi trình bày câu trả lời cuối cùng, hãy thực thi một kịch bản Python trong hộp cát của bạn để
+xác minh bằng số trị khẳng định này cho một bộ kiểm thử đa dạng gồm các trường hợp biên (ví dụ: 
+các đường giới hạn, trạng thái rỗng, tọa độ âm). Hãy xuất các nhật ký thực thi và sử dụng những
+kết quả đó để tinh chỉnh kết luận hình thức của bạn.
+	\end{verbatim}
+	\item \textbf{Precision control over ``level of thinking''.} The Gemini 3 series relies heavily on its internal reasoning capabilities, which are optimized to function best at default parameters.
+	
+	\textbf{Kiểm soát chuẩn xác "mức độ tư duy".} Chuỗi mô hình Gemini 3 phụ thuộc rất lớn vào năng lực suy luận nội tại, vốn được tối ưu hóa để hoạt động tốt nhất ở các tham số mặc định.
+	\begin{itemize}
+		\item \textit{Leave temperature alone}: Avoid manually dropping the temperature parameter down to $0.0$ for reasoning tasks. For the Gemini 3 family, altering the default temperature can trigger unexpected behavior, e.g., infinite generation loops or degraded performance on complex proofs.
+		
+		\textit{Giữ nguyên tham số temperature (nhiệt độ)}: Tránh việc tự ý hạ tham số nhiệt độ xuống $0.0$ đối với các tác vụ suy luận. Với thế hệ Gemini 3, việc thay đổi nhiệt độ mặc định có thể gây ra những hành vi không mong muốn, chẳng hạn như các vòng lặp sinh văn bản vô hạn hoặc làm suy giảm hiệu suất ở các chứng minh phức tạp.
+		\item \textit{Enforce verbosity rules}: By default, Gemini 3 favors concise, direct answers. If you require a highly detailed breakdown or a comprehensive step-by-step mathematical derivation, you must explicitly command it: ``Provide an exhaustive, step-by-step breakdown of every algebraic manipulation, defining every intermediate variable explicitly.''
+		
+		\textit{Thực thi các quy tắc về mức độ chi tiết}: Theo mặc định, Gemini 3 ưu tiên các câu trả lời ngắn gọn, đi thẳng vào vấn đề. Nếu bạn yêu cầu một sự phân tích cực kỳ chi tiết hay một quá trình diễn giải toán học toàn diện từng bước một, bạn phải ra lệnh một cách rõ ràng: "Hãy cung cấp một sự phân tích thấu đáo, từng bước một cho mọi thao tác đại số, đồng thời định nghĩa mọi biến trung gian một cách rành mạch."
+	\end{itemize}
 \end{enumerate}
+
+\paragraph{Operational blueprint for mathematical \& code rigor.} To prevent errors like ``math-washing'' (superficial mathematical phrasing lacking actual proof), use structural delimiters like XML tags inside your prompt. This primes the model to switch into a highly structured execution mode.
+
+\paragraph{Bản thiết kế vận hành cho tính chặt chẽ của toán học \& mã lệnh.} Để ngăn chặn các lỗi như "math-washing" (việc sử dụng từ ngữ toán học hời hợt nhưng thiếu chứng minh thực tế), hãy sử dụng các ký tự phân cách cấu trúc như thẻ XML bên trong prompt của bạn. Điều này sẽ mồi cho mô hình chuyển đổi sang chế độ thực thi có cấu trúc cao.
+\begin{verbatim}
+<role>
+You are a peer reviewer for an elite journal in mathematical analysis and theoretical computer
+science. You prioritize absolute formal rigor and zero superficial explanations.
+</role>
+
+<context>
+[Insert draft section or specific theorem here]
+</context>
+
+<task>
+Analyze the transition from Equation 4 to Equation 5. Check for unstated assumptions regarding the
+boundary conditions or the regularity of the domain.
+</task>
+
+<constraints>
+- Render all formal statements using precise LaTeX.
+- If a step lacks justification, mark it explicitly as "Gap Identified" and provide the exact
+missing lemma required to close it.
+</constraints>
+\end{verbatim}
+
+\textit{Bản dịch Markdown}:
+\begin{verbatim}
+<role>
+Bạn là một người phản biện đồng cấp cho một tạp chí danh giá về phân tích toán học và khoa học
+máy tính lý thuyết. Bạn ưu tiên tính chặt chẽ hình thức tuyệt đối và không có bất kỳ lời giải
+thích hời hợt nào.
+</role>
+
+<context>
+[Chèn phần bản thảo hoặc định lý cụ thể vào đây]
+</context>
+
+<task>
+Phân tích quá trình chuyển đổi từ Phương trình 4 sang Phương trình 5. Kiểm tra các giả định
+chưa được nêu rõ liên quan đến các điều kiện biên hoặc tính chính quy của miền.
+</task>
+
+<constraints>
+- Kết xuất tất cả các mệnh đề hình thức bằng LaTeX chuẩn xác.
+- Nếu một bước thiếu sự biện minh, hãy đánh dấu nó một cách rõ ràng là "Gap Identified" (Đã
+phát hiện lỗ hổng) và cung cấp chính xác bổ đề còn thiếu cần thiết để lấp đầy nó.
+</constraints>
+\end{verbatim}
+Using this decoupled, highly directed structure allows Gemini to allocate its context \& inference compute entirely to the logical core of your problem rather than deciphering conversational intent.
+
+Việc sử dụng cấu trúc tách rời và có tính định hướng cao này cho phép Gemini phân bổ toàn bộ ngữ cảnh \& năng lực tính toán suy luận vào cốt lõi logic của bài toán thay vì phải cố gắng giải mã ý định đàm thoại.
+
+\noindent{\sf[Gemini 3.1 Pro Deep Think]}'s answer on Prompt \ref{promt: how to prompt Gemini}:
+
+***
+
+
+
+
 
 \begin{prompt}
 	Survey, research, synthesize how Terence Tao has been pioneering the use of AI in professional mathematics research. Focus on his strategies, qualities of prompts, etc. 
+	
+	Hãy khảo sát, nghiên cứu và tổng hợp cách Terence Tao đã tiên phong trong việc sử dụng AI vào các nghiên cứu toán học chuyên nghiệp. Tập trung vào các chiến lược, chất lượng của các prompt, v.v. của ông ấy.
 \end{prompt}
+To master the use of AI at the absolute frontier of human knowledge, there is no better case study than Prof. Dr. \textsc{Terence Tao}. A Fields Medalist \& widely considered the greatest living mathematician, Tao has fundamentally shifted his stance on AI. He moved from viewing early AI as a ``mediocre graduate student'' to declaring modern AI ``ready for primetime'' in elite mathematical research.
+
+Để làm chủ việc sử dụng AI ở biên giới tuyệt đối của tri thức nhân loại, không có trường hợp nghiên cứu nào tốt hơn Giáo sư, Tiến sĩ \textsc{Terence Tao}. Là một người đạt huy chương Fields \& được công nhận rộng rãi là nhà toán học vĩ đại nhất còn sống, Tao đã thay đổi căn bản lập trường của mình về AI. Ông đã chuyển từ việc coi các AI đời đầu như một "nghiên cứu sinh tầm thường" sang việc tuyên bố rằng AI hiện đại đã "sẵn sàng cho thời kỳ hoàng kim" trong các nghiên cứu toán học tinh hoa.
+
+Tao does not use Large Language Models (LLMs) as ``magic oracles'' to autonomously solve Millennium Prize problems. Instead, he treats AI as a \textit{massive computational lever \& a cognitive force-multiplier}. He has pioneered a highly structured, ``neuro-symbolic'' workflow that merges AI's creative intuition with strict formal verification.
+
+Tao không sử dụng các Mô hình Ngôn ngữ Lớn (LLMs) như những "nhà tiên tri ma thuật" để tự động giải các bài toán Thiên niên kỷ. Thay vào đó, ông coi AI là một \textit{đòn bẩy tính toán khổng lồ \& một hệ số nhân sức mạnh nhận thức}. Ông đã tiên phong trong một quy trình làm việc "thần kinh - ký hiệu" (neuro-symbolic) có cấu trúc cao, dung hợp trực giác sáng tạo của AI với sự xác minh hình thức nghiêm ngặt.
+
+Here is a comprehensive research synthesis of \textsc{Terence Tao}'s pioneering strategies, his prompt engineering philosophy, \& how you can apply his methods to your own advanced workflows using Gemini Deep Think.
+
+Dưới đây là một bản tổng hợp nghiên cứu toàn diện về các chiến lược tiên phong của \textsc{Terence Tao}, triết lý kỹ thuật prompt của ông, \& cách bạn có thể áp dụng các phương pháp của ông vào những quy trình làm việc nâng cao của riêng mình bằng cách sử dụng Gemini Deep Think.
+\begin{enumerate}
+	\item \textbf{The core philosophy: The ``architecture \& executor'' paradigm.} \textsc{Tao} approaches AI collaboration with a strict division of labor. He notes that AI is not yet capable of building deep, cumulative theoretical pathways from scratch. Therefore, the collaboration is asymmetric:
+	
+	\textbf{Triết lý cốt lõi: Hệ hình "kiến trúc sư \& người thực thi".} \textsc{Tao} tiếp cận việc hợp tác với AI bằng một sự phân công lao động nghiêm ngặt. Ông lưu ý rằng AI hiện vẫn chưa có khả năng tự xây dựng các lộ trình lý thuyết sâu sắc, mang tính tích lũy từ con số không. Do đó, sự hợp tác này mang tính bất đối xứng:
+	\begin{itemize}
+		\item \textit{The human is the Architect}: Tao provides the ``Newtonian'' intuition, defines the overarching strategy, \& breaks the massive theorem down into tractable sub-problems.
+		
+		\textit{Con người là Kiến trúc sư}: Tao cung cấp trực giác mang tính "Newton", định hình chiến lược bao trùm, \& chia nhỏ các định lý đồ sộ thành những bài toán phụ có thể xử lý được.
+		\item \textit{The AI is the Executor}: \textsf{Tao} delegates the routing, tedious, or highly computational sub-tasks (e.g., algebraic manipulation, exhaustive literature search, brute-force bounds checking) to the AI.
+		
+		\textit{AI là Người thực thi}: \textsf{Tao} giao phó các tác vụ phụ mang tính định tuyến, tẻ nhạt hoặc đòi hỏi khối lượng tính toán cao (ví dụ: thao tác đại số, tìm kiếm tài liệu triệt để, kiểm tra giới hạn bằng phương pháp vét cạn) cho AI.
+	\end{itemize}
+	By doing this, AI eliminates the \textit{cognitive friction} of mathematical execution, freeing the human mind to focus entirely on the high-level architecture of the proof.
+	
+	Bằng cách thực hiện điều này, AI loại bỏ sự \textit{ma sát nhận thức} (cognitive friction) trong việc thực thi toán học, giải phóng tâm trí con người để tập trung hoàn toàn vào kiến trúc bậc cao của chứng minh.
+	\item \textbf{The tech stack: The AI-formal-human triad.} \textsc{Tao} recognizes that LLMs suffer from ``math-washing''---the tendency to generate proofs that read beautifully but contain fatal, hallucinated logical leaps. To neutralize this, he never relies on an AI's raw text output for final truth. He utilizes a triad:
+	
+	\textbf{Ngăn xếp công nghệ: Bộ ba AI-hình thức-con người.} \textsc{Tao} nhận ra rằng các LLMs mắc phải lỗi "math-washing"---xu hướng sinh ra những chứng minh đọc thì rất bùi tai nhưng lại chứa đựng những bước nhảy vọt về logic chí mạng, mang tính ảo giác. Để triệt tiêu điều này, ông không bao giờ dựa dẫm vào văn bản đầu ra thô của AI để coi là chân lý cuối cùng. Ông sử dụng một bộ ba:
+	\begin{itemize}
+		\item[(i)] \textit{Exploration (LLMs/Gemini/Claude)}: Brainstorming proof strategies, generating natural-language sketches, \& translating dense jargon.
+		
+		\textit{Khám phá (LLMs/Gemini/Claude)}: Tư duy các chiến lược chứng minh, tạo ra các phác thảo bằng ngôn ngữ tự nhiên, \& dịch thuật các thuật ngữ chuyên ngành dày đặc.
+		\item[(ii)] \textit{Empirical testing (Python/SymPy/Z3)}: Using AI to write code that brute-forces finite spaces to look for counterexamples before committing human time to a theoretical proof.
+		
+		\textit{Kiểm thử thực nghiệm (Python/SymPy/Z3)}: Sử dụng AI để viết mã lệnh vét cạn các không gian hữu hạn nhằm tìm kiếm các phản ví dụ trước khi đầu tư thời gian của con người vào một chứng minh lý thuyết.
+		\item \textit{Absolute verification (Lean 4)}: This is the breakthrough. Lean is a rigid, machine-readable formal proof assistant language. \textsf{Tao} uses AI to translate his informal math into Lean code. If the Lean compiler accepts the code, the math is 100\% correct, entirely eliminating AI hallucinations.
+		
+		\textit{Xác minh tuyệt đối (Lean 4)}: Đây chính là bước đột phá. Lean là một ngôn ngữ trợ lý chứng minh hình thức cứng nhắc, có thể đọc được bằng máy. \textsf{Tao} sử dụng AI để dịch toán học không hình thức (informal) của mình sang mã Lean. Nếu trình biên dịch Lean chấp nhận đoạn mã đó, phép toán chính xác 100\%, hoàn toàn loại bỏ các ảo giác của AI.
+	\end{itemize}
+	\item \textbf{\textsc{Tao}'s advanced prompt engineering strategies.} Research stemming from {\sc Tao}'s public workflow \& his recent massive collaborations reveals highly sophisticated, specialized prompting strategies.
+	
+	\textbf{Các chiến lược kỹ thuật prompt nâng cao của \textsc{Tao}.} Những nghiên cứu xuất phát từ quy trình làm việc công khai của {\sc Tao} \& những dự án hợp tác quy mô lớn gần đây của ông tiết lộ các chiến lược prompt chuyên biệt, cực kỳ tinh vi.
+	\begin{itemize}
+		\item[(i)] \textit{Evading the ``single-prompt ceiling'' (modular sub-goaling)}: When dealing with complex logic, the amateur instinct is to write a massive ``megaprompt'' containing all the rules, definitions, \& contexts.
+		
+		\textit{Lẩn tránh "trần prompt đơn" (chia nhỏ mục tiêu dạng mô-đun)}: Khi đối mặt với logic phức tạp, bản năng của người nghiệp dư là viết một "siêu prompt" (megaprompt) đồ sộ chứa tất cả các quy tắc, định nghĩa, \& ngữ cảnh.
+		
+		\textit{The reality}: {\sc Tao} notes when an LLM is overloaded with complex rules, its logical reasoning collapses.
+		
+		\textit{Thực tế}: {\sc Tao} ghi nhận rằng khi một LLM bị quá tải bởi các quy tắc phức tạp, khả năng suy luận logic của nó sẽ sụp đổ.
+		
+		\textit{Tao's strategy (DSP -- Draft, Sketch, Prove)}: He breaks a theorem down into tiny, modular chunks. He first prompts the AI for a ``Proof Sketch'' (a skeleton with specific gaps). He then isolates the AI in a focused chat window to solve \textit{just $1$ sub-lemma at a time}, feeding the verified result into the next prompt.
+		
+		\textit{Chiến lược của Tao (DSP -- Nháp, Phác thảo, Chứng minh)}: Ông chia một định lý thành các phần mô-đun nhỏ bé. Đầu tiên, ông prompt AI để tạo ra một "Phác thảo Chứng minh" (một bộ khung với những khoảng trống cụ thể). Sau đó, ông cô lập AI trong một cửa sổ trò chuyện tập trung để giải quyết \textit{chỉ 1 bổ đề phụ tại một thời điểm}, truyền kết quả đã được xác minh vào prompt tiếp theo.
+		\item[(ii)] \textit{``Vibe coding'' \& autoformalization.} Because the Lean 4 compiler acts as an infallible judge, {\sc Tao} does not need to micromanage the syntax in his prompts. He engages in what he calls ``vibe coding.''
+		
+		\textit{"Vibe coding" \& tự động hình thức hóa.} Do trình biên dịch Lean 4 đóng vai trò như một vị giám khảo không thể sai lầm, {\sc Tao} không cần phải quản lý vi mô cú pháp trong các prompt của mình. Ông tham gia vào cái mà ông gọi là "vibe coding".
+		
+		\textit{The strategy}: He feeds human mathematical reasoning (the informal ``vibe'' or English intuition) into the prompt \& commands the AI to write the corresponding rigid Lean {\tt tactics}.
+		
+		\textit{Chiến lược}: Ông đưa các suy luận toán học của con người ("vibe" không hình thức hoặc trực giác bằng tiếng Anh) vào prompt \& ra lệnh cho AI viết các {\tt tactics} Lean cứng nhắc tương ứng.
+		
+		\textit{Prompt example}: ``The general idea here is to use a fractional finite-difference operator to bound the upper limit. Extract the key boundary conditions \& translate this step-by-step into rigorous Lean 4 proposition statements. Do not attempt to skip algebraic steps.''
+		
+		\textit{Ví dụ về prompt}: "Ý tưởng chung ở đây là sử dụng toán tử sai phân hữu hạn cấp phân số để chặn giới hạn trên. Hãy trích xuất các điều kiện biên then chốt \& dịch từng bước điều này thành các mệnh đề hình thức Lean 4 chặt chẽ. Đừng cố gắng bỏ qua bất kỳ bước đại số nào."
+		\item[(iii)] \textit{Asymmetric prompting (true vs. false)}: {\sc Tao}'s teams discovered that prompting an AI to prove a claim is {\tt true} requires an entirely different strategy than proving it is {\tt false}.
+		
+		\textit{Prompt bất đối xứng (đúng vs. sai)}: Đội ngũ của {\sc Tao} đã phát hiện ra rằng việc prompt một AI để chứng minh một tuyên bố là {\tt đúng} đòi hỏi một chiến lược hoàn toàn khác so với việc chứng minh nó là {\tt sai}.
+		
+		\textit{Prompting for false (counterexample hunting)}: Do not task the AI to logically deduce a falsehood. Prompt it to act as a programmer: ``Write a Python script using brute-force search to test this equation across all small finite magmas. Output any matrix where this equation fails.''
+		
+		\textit{Prompt để chứng minh sai (săn tìm phản ví dụ)}: Không giao nhiệm vụ cho AI để suy diễn logic ra một điều sai. Hãy prompt nó hành động như một lập trình viên: "Viết một kịch bản Python sử dụng phương pháp tìm kiếm vét cạn để kiểm tra phương trình này trên toàn bộ các magma hữu hạn nhỏ. Xuất ra bất kỳ ma trận nào mà phương trình này thất bại."
+		
+		\textit{Prompting for true (universal quantification)}: Prompt the AI to act as a formalizer, explicitly forbidding the use of unverified empirical examples. ``Rely strictly on deductive axioms to formalize this step.''
+		
+		\textit{Prompt để chứng minh đúng (lượng hóa phổ dụng)}: Prompt AI hành động như một người hình thức hóa, cấm tuyệt đối việc sử dụng các ví dụ thực nghiệm chưa được xác minh. "Chỉ dựa vào các tiên đề suy diễn để hình thức hóa bước này."
+		\item[(iv)] \textit{The iterative ``compiler loop''}: {\sc Tao} treats prompt engineering as a conversation with a brilliant but sloppy intern. When the AI writes Lean or Python code that fails, {\sc Tao} does not fix it manually.
+		
+		\textit{"Vòng lặp trình biên dịch" lặp đi lặp lại}: {\sc Tao} coi kỹ thuật prompt như một cuộc trò chuyện với một thực tập sinh xuất chúng nhưng cẩu thả. Khi AI viết mã Lean hoặc Python bị lỗi, {\sc Tao} không tự sửa nó bằng tay.
+		
+		\textit{The strategy}: He copies the exact compiler error \& feeds it directly back to the AI.
+		
+		\textit{Chiến lược}: Ông sao chép chính xác lỗi của trình biên dịch \& truyền nó trực tiếp lại cho AI.
+		
+		\textit{Prompt example}: ``Your previous transition from Lemma A to B failed with the following Lean error: {\tt[insert error]}. You missed the (6.3) boundary condition. Reconstruct this specific lemma applying the (6.3) condition.''
+		
+		\textit{Ví dụ về prompt}: "Quá trình chuyển đổi trước đó của bạn từ Bổ đề A sang B đã thất bại với lỗi Lean sau: {\tt[chèn lỗi]}. Bạn đã bỏ sót điều kiện biên (6.3). Hãy tái cấu trúc lại bổ đề cụ thể này bằng cách áp dụng điều kiện (6.3)."
+	\end{itemize}
+	\item \textbf{Case study: The equational theories project.} The ultimate validation of {\sc Tao}'s AI workflow occurred between late 2024 \& early 2025 during the \textit{Equational Theories Project}. The goal was to map the implication graph of 4694 algebraic equations---a massive mathematical space resulting in $> 22$ million {\tt true/false} mathematical implications.
+	
+	\textbf{Trường hợp nghiên cứu: Dự án các lý thuyết phương trình.} Sự xác nhận tối thượng cho quy trình làm việc bằng AI của {\sc Tao} đã diễn ra từ cuối năm 2024 \& đầu năm 2025 trong \textit{Dự án các lý thuyết phương trình} (Equational Theories Project). Mục tiêu là lập bản đồ đồ thị kéo theo (implication graph) của 4694 phương trình đại số---một không gian toán học khổng lồ dẫn đến $> 22$ triệu hệ quả toán học {\tt đúng/sai}.
+	
+	By orchestrating AI models to write Python scripts for counterexample generation, utilizing automated theorem provers (like Vampire \& Mace4), \& prompting LLMs to formalize the remaining deductive proofs in Lean, the project completely mapped all 22 million edges in a matter of months. It stands as the definitive proof that mathematics has entered an era of AI-orchestrated scale.
+	
+	Bằng cách điều phối các mô hình AI viết mã lệnh Python để tạo phản ví dụ, tận dụng các bộ chứng minh định lý tự động (như Vampire \& Mace4), \& prompt các LLMs để hình thức hóa những phần chứng minh suy diễn còn lại trong Lean, dự án này đã lập bản đồ hoàn chỉnh toàn bộ 22 triệu cạnh đồ thị chỉ trong vòng vài tháng. Đây được coi là bằng chứng xác thực rằng toán học đã bước vào kỷ nguyên phát triển quy mô dưới sự điều phối của AI.
+\end{enumerate}
+
+\paragraph{How to emulate {\sc Terence Tao} using Gemini Deep Think.} To elevate our use of Gemini to this Fields-Medalist level for our own research, paperwork, or algorithmic design:
+
+\paragraph{Cách mô phỏng {\sc Terence Tao} bằng cách sử dụng Gemini Deep Think.} Để nâng tầm việc sử dụng Gemini của chúng ta lên đẳng cấp của một người đoạt huy chương Fields nhằm phục vụ cho mục đích nghiên cứu, viết tài liệu, hay thiết kế thuật toán của riêng chúng ta:
+\begin{enumerate}
+	\item \textit{Never accept raw text for System-2 logic}: If you are doing math, data science, or complex coding, demand that Gemini Deep Think output its reasoning as an executable script (Python) or formal logic.
+	
+	\textit{Không bao giờ chấp nhận văn bản thô cho logic của Hệ thống 2}: Nếu bạn đang làm toán, khoa học dữ liệu hoặc lập trình phức tạp, hãy yêu cầu Gemini Deep Think kết xuất suy luận của nó dưới dạng kịch bản thực thi được (Python) hoặc logic hình thức.
+	\item \textit{Act as the Orchestrator}: Stop asking Gemini to give us the final answer. Break our problem into 5 sub-tasks. Prompt Gemini to solve Task 1. Verify it. Feed the verified context into the prompt for Task 2.
+	
+	\textit{Đóng vai trò Người điều phối}: Hãy ngừng yêu cầu Gemini cung cấp cho chúng ta câu trả lời cuối cùng. Chia nhỏ bài toán thành 5 tác vụ phụ. Prompt Gemini để giải quyết Tác vụ 1. Xác minh nó. Truyền ngữ cảnh đã được xác minh vào prompt cho Tác vụ 2.
+	\item \textit{Force structural collisions}: To prevent AI from acting as a ``yes-man'' (sycophancy), force it to explore mutually exclusive pathways simultaneously.
+	
+	\textit{Tạo ra các vụ va chạm cấu trúc}: Để ngăn chặn việc AI trở thành một "kẻ ba phải" (thói xu nịnh), hãy ép buộc nó khám phá các hướng đi loại trừ lẫn nhau cùng một lúc.
+	
+	Prompt Gemini: ``Evaluate this theoretical model. First, attempt to engineer a highly specific counterexample that breaks it. Second, attempt to outline a direct proof validating it. Present the structural collision between these 2 paths before drawing a final conclusion.''
+	
+	Prompt Gemini: "Đánh giá mô hình lý thuyết này. Đầu tiên, hãy nỗ lực thiết kế một phản ví dụ cực kỳ cụ thể có thể phá vỡ nó. Thứ hai, hãy cố gắng phác thảo một chứng minh trực tiếp để hợp lệ hóa nó. Hãy trình bày sự va chạm cấu trúc giữa 2 hướng đi này trước khi đưa ra kết luận cuối cùng."
+\end{enumerate}
 
 %------------------------------------------------------------------------------%
 
