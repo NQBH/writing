@@ -1,13 +1,13 @@
 \documentclass{article}
 \usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
-\addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,enumitem,eurosym,fancyvrb,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,eurosym,fancyvrb,float,graphicx,mathtools,tikz,tabularx,booktabs}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
+
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
 \newtheorem{cauhoi}{Câu hỏi}
@@ -35,7 +35,9 @@
 \newtheorem{remark}{Remark}
 \newtheorem{theorem}{Theorem}
 \newtheorem{vidu}{Ví dụ}
-\usepackage[margin=1.61803398875cm]{geometry} % golden ratio
+
+\usepackage[margin=1.61803398875cm]{geometry} % Golden ratio margin
+
 \def\labelitemii{$\circ$}
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
@@ -43,200 +45,201 @@
 \setlist[itemize]{leftmargin=*}
 \setlist[enumerate]{leftmargin=*}
 
-\title{Some Decision Problems: A Personal Perspective\\Vài Bài Toán Quyết Định: 1 Góc Nhìn Cá Nhân}
-\author{Nguyễn Quản Bá Hồng\footnote{A scientist- {\it\&} creative artist wannabe.\\E-mail: {\sf nguyenquanbahong@gmail.com}. Website: \url{https://nqbh.github.io/}. GitHub: \url{https://github.com/NQBH}.}}
+\title{\emph{Some Decision Problems: A Personal Perspective}\\ Vài Bài Toán Quyết Định: 1 Góc Nhìn Cá Nhân}
+\author{Nguyễn Quản Bá Hồng\footnote{A scientist-\textit{\&} creative artist wannabe.\\E-mail: \sf nguyenquanbahong@gmail.com. Website: \url{https://nqbh.github.io/}. GitHub: \url{https://github.com/NQBH}.}}
 \date{\today}
 
 \begin{document}
 \maketitle
+
 \begin{abstract}
-	In this writing, I formalize some decision problems in academic, psychology, philosophy \& provide some ``acceptable'' solutions for them.
+	In this work, I formalize several decision problems across academic, psychological, and philosophical domains, offering structured, pragmatic frameworks for each.
 	
-	This text is a part of the series {\it Some Topics in Advanced STEM \& Beyond}:
-	
-	{\sc url}: \url{https://nqbh.github.io/advanced_STEM/}.
-	
-	Latest version:
-	\begin{itemize}
-		\item {\it Some Decision Problems: A Personal Perspective -- Vài Bài Toán Quyết Định: 1 Góc Nhìn Cá Nhân}.
-		
-		PDF: {\sc url}: \url{}.
-		
-		\TeX: {\sc url}: \url{}.
-	\end{itemize}
+	This manuscript is part of the ongoing series \textit{Some Topics in Advanced STEM \& Beyond}:
+	\begin{center}
+		\url{https://nqbh.github.io/advanced_STEM/}
+	\end{center}
 \end{abstract}
+
 \tableofcontents
+\clearpage
 
 %------------------------------------------------------------------------------%
-
 \section{Preface}
-\textit{There are billions of people out there who can always make much better decisions than me for every single problem. Then why the hell did I decide to write this text?} The answer is simple: Because I suck at decision, I have to learn it from scratch. \textit{With this reason, will you read this text?}
-
 %------------------------------------------------------------------------------%
+
+\textit{There are billions of people out there who can always make much better decisions than me for every single problem. Then why the hell did I decide to write this text?} The answer is simple: Because I suck at decisions, I have to learn from scratch. \textit{With this reason, will you read this text?}
 
 \subsection{Disclaimer}
-
 \begin{itemize}
-	\item All characters in this novel are purely imaginary.
+	\item All scenarios and analytical frameworks presented herein represent personal theoretical reflections.
 \end{itemize}
-
-%------------------------------------------------------------------------------%
 
 \subsection{Goals}
-
 \begin{itemize}
-	\item Find all kind of aesthetic beauties in various forms.
-	\item Support good people in handling life decision dilemmas.
+	\item Uncover structural and aesthetic beauty across interdisciplinary decision models.
+	\item Provide clear, actionable decision heuristics for navigating complex academic, professional, and psychological dilemmas.
 \end{itemize}
 
 %------------------------------------------------------------------------------%
-
 \section{Some Academic Decision Problems}
-
 %------------------------------------------------------------------------------%
 
-\subsection{Frog--eagle dilemma}
+\subsection{Frog--Eagle Dilemma}
 
-{\sf[H, 29, AI prompter, scientist wannabe]:} Từng nghe câu chuyện về đại bàng \& ếch chưa? Nôm na: Đại bàng luôn bay cao, có tầm nhìn xa trông rộng, nên có thể bao quát được mọi thứ, giống kiểu của thiếu niên thiên tài trong Ao Ashi vậy---có tầm nhìn cực rộng nên có thể bao quát được cả sân bóng, nên sẽ phù hợp với lối chơi kiến tạo, điều khiển thế trận. Còn ếch thì dưới mặt đất, có khi ngồi sâu dưới đáy giếng, không nhìn thấy bức tranh toàn cảnh (big picture), nên thường khá nông cạn về các thứ mình không rành, nhưng lại cực kỳ hiểu rõ về những thứ trong địa bàn của mình, như la bàn của Akaza trong Demon Slayer vậy: thằng nào vào tầm ngắm là đập---như 1 cái bẫy săn mồi hoàn hảo, điển hình của loài ếch \& các loài săn côn trùng khác.
+{\sf [H, 29, AI prompter, scientist wannabe]:} Từng nghe câu chuyện về đại bàng \& ếch chưa? Nôm na: Đại bàng luôn bay cao, có tầm nhìn xa trông rộng, nên có thể bao quát được mọi thứ, giống kiểu của thiếu niên thiên tài trong \textit{Ao Ashi} vậy---có tầm nhìn cực rộng nên có thể bao quát được cả sân bóng, phù hợp với lối chơi kiến tạo, điều khiển thế trận. Còn ếch thì dưới mặt đất, có khi ngồi sâu dưới đáy giếng, không nhìn thấy bức tranh toàn cảnh (big picture), nên thường khá nông cạn về các thứ mình không rành, nhưng lại cực kỳ hiểu rõ về những thứ trong địa bàn của mình, như la bàn của Akaza trong \textit{Demon Slayer} vậy: thằng nào vào tầm ngắm là đập---như 1 cái bẫy săn mồi hoàn hảo.
 
-So do you want to become a frog or an eagle? My answer is: I want to become an animal shifter that can shift easily between these.
+So do you want to become a frog or an eagle? My answer is: I want to become an animal shifter that can shift easily between these two modes.
 
-Lấy Gemini ecosystem, gồm Gemini Flash-Lite, Flash (standard, extended), Pro (3 modes: Standard, Extended, Deep Think) làm ví dụ. Nếu tôi cần làm việc với context khá lớn, thì tôi sẽ chọn làm đại bàng: Gemini Flash. Nếu cho đại bàng ăn nhiều tí thì xài Gemini Flash Extended để bay cho sung, cho cả tầm nhìn \& phạm vi được mở rộng. Còn nếu tôi muốn đào sâu về 1 vấn đề thì tôi sẽ chuyển sang ếch. Là 1 con ếch, tôi chỉ quan tâm tới những thứ lân cận, xung quanh mình, y như Linus Tovald từng nói: ...
+Lấy Gemini ecosystem, gồm Gemini Flash-Lite, Flash (standard, extended), Pro (3 modes: Standard, Extended, Deep Think) làm ví dụ. Nếu tôi cần làm việc với context khá lớn, tôi sẽ chọn làm đại bàng: Gemini Flash. Nếu cho đại bàng ăn nhiều tí thì xài Gemini Flash Extended để bay cho sung, cho cả tầm nhìn \& phạm vi được mở rộng. Còn nếu tôi muốn đào sâu về 1 vấn đề thì tôi sẽ chuyển sang ếch. Là 1 con ếch, tôi chỉ quan tâm tới những thứ lân cận, xung quanh mình, y như Linus Torvalds từng nói: \textit{``Bad programmers worry about the code. Good programmers worry about data structures and their relationships.''}
 
-The \textit{bird-eagle dilemma} cuts straight to the core of cognitive strategy, whether you are architecting a massive distributed system, designing a complex algorithmic test suite, or prompting an AI model. Sticking to a single mode is an evolutionary dead end: eagles starve when the field requires microscopic precision, \& frogs get crushed when the global ecosystem shifts.
+\vspace{0.5em}
+The \textit{frog--eagle dilemma} cuts straight to the core of cognitive strategy, whether you are architecting a massive distributed system, designing a complex algorithmic test suite, or prompting an AI model. Sticking to a single mode is an evolutionary dead end: eagles starve when the field requires microscopic precision, and frogs get crushed when the global ecosystem shifts.
 
-The concept can be expanded across cognitive mechanics, software engineering philosophies, and practical execution strategies.
-
-\subsubsection{Deepening the metaphor: Global exploration vs. local exploitation}
+\subsubsection{Deepening the Metaphor: Global Exploration vs. Local Exploitation}
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|c|c|}
+	\small
+	\begin{tabularx}{\textwidth}{|p{2.5cm}|X|X|}
 		\hline
-		& The eagle (global macro-architecture) & The frog (local micro-mastery) \\
-		\hline
-		Behavior & Soars high, abstract away the noise, sees the entire dependency graph, \& predicts downstream collisions before they happen. & Sits completely still in its specific pond, perfectly attuned to micro-vibrations, cache-line alignments, \& state-transition bugs. \\
-		\hline
-		AI mapping & Handling massive context windows, mapping sprawling codebases, or deploying high-level reasoning models (like Gemini Pro Deep Think) to outline a theoretical proof or system topology. & Pinpointing a single algorithmic bottleneck, writing a hyper-optimized vectorized loop, or debugging a tricky pointer arithmetic issue. \\
-		\hline
-		Blind spot & \textit{``God-eye delusion''}: An eagle can see the entire forest burning, but it cannot smell the specific burning leaf. It suffers from abstraction fatigue---missing the critical memory leak or off-by-one error lurking in the low-level logic. & \textit{The local optimum trap}: A frog can build the most optimized, beautifully crafted routine in the world, only to realize it solves the wrong problem because the broader system architecture shifted entirely. \\
-		\hline
-	\end{tabular}
+		\emph{Dimension} & \emph{The Eagle (Global Macro-Architecture)} & \emph{The Frog (Local Micro-Mastery)} \\ \hline
+		\emph{Behavior} & Soars high, abstracts away the noise, sees the entire dependency graph, and predicts downstream collisions before they happen. & Sits completely still in its specific pond, perfectly attuned to micro-vibrations, cache-line alignments, and state-transition bugs. \\ \hline
+		\emph{AI Mapping} & Handling massive context windows, mapping sprawling codebases, or deploying high-level reasoning models (like Gemini Pro Deep Think) to outline a theoretical proof or system topology. & Pinpointing a single algorithmic bottleneck, writing a hyper-optimized vectorized loop, or debugging a tricky pointer arithmetic issue. \\ \hline
+		\emph{Blind Spot} & \textit{``God-Eye Delusion''}: An eagle can see the entire forest burning, but it cannot smell the specific burning leaf. It suffers from abstraction fatigue---missing the critical memory leak or off-by-one error lurking in low-level logic. & \textit{Local Optimum Trap}: A frog can build the most optimized, beautifully crafted routine in the world, only to realize it solves the wrong problem because the broader system architecture shifted entirely. \\ \hline
+	\end{tabularx}
+	\caption{Comparative analysis of Eagle (global/exploration) and Frog (local/exploitation) cognitive modes.}
 \end{table}
 
-%------------------------------------------------------------------------------%
+\subsubsection{Linus Torvalds: Good Taste \& the Frog Mindset}
 
-\subsubsection{{\sc Linus Torvalds}: good taste \& the frog mindset}
-\textsc{Linus Torvalds} is the ultimate archetype of the \textit{apex frog who understands the ecosystem}. His famous philosophy on ``good taste'' in data structures is rooted entirely in local realism.
+\textsc{Linus Torvalds} represents the archetype of the \textit{apex frog who understands the broader ecosystem}. His philosophy on ``good taste'' in code design is rooted entirely in micro-level realism:
+
 \begin{quote}
-	``Bad programmers worry about the code. Good programmers worry about data structures \& their relationships.'' -- \textsc{Linus Torvalds}
+	``Bad programmers worry about the code. Good programmers worry about data structures and their relationships.'' --- \textsc{Linus Torvalds}
 \end{quote}
-While an architect (eagle) might spend weeks drawing abstract UML diagrams of how data \textit{should} flow, \textsc{Torvalds} sits in th mud (frog), looking at how a linked list or pointer redirection actually behaves inside CPU registers \& cache lines.
+
+While a macro-architect (eagle) might spend weeks drawing abstract UML diagrams of how data \textit{should} flow, \textsc{Torvalds} sits in the mud (frog), examining how a linked list or pointer redirection actually behaves inside CPU registers and cache lines:
 \begin{itemize}
-	\item A pure eagle designs a framework with gorgeous abstraction layers that crawl at runtime due to cache misses.
-	\item A pure frog builds a blazing-fast kernel modulo that cannot scale outside its specific hardware niche.
-	\item The \textit{shapeshifter} uses the eagle view to pick the right global data structure, then immediately turns into a frog to ensure every byte of that structure is cache-friendly \& branch-prediction optimized.
+	\item A pure eagle designs a framework with gorgeous abstraction layers that crawl at runtime due to continuous cache misses.
+	\item A pure frog builds a blazing-fast kernel module that cannot scale outside its specific hardware niche.
+	\item The \textit{shapeshifter} uses the eagle view to select the globally optimal data structure, then immediately shifts to the frog mode to ensure every byte is cache-friendly and branch-prediction optimized.
 \end{itemize}
 
-%------------------------------------------------------------------------------%
+\subsubsection{Lifecycle of an Animal Shifter: A Practical Workflow}
 
-\subsubsection{Lifecycle of an animal shifter: A practical workflow}
-True productivity is not about picking an animal; it is about mastering the \textit{metamorphosis cycle}. Complex problem-solving requires cycling through specific phases:
-\begin{enumerate}
-	\item \textit{The eagle soar (inception \& modeling)}: When tackling a complex research paper or a multi-layered optimization problem, you must ascend. You define the invariants, map out the combinatorial search space, \& decide on the overarching strategy.
+True productivity is not about choosing a single identity; it is about mastering the \textit{metamorphosis cycle}. Complex problem-solving requires cycling through specific phases:
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+	\item \emph{The Eagle Soar (Inception \& Modeling):} When tackling a complex research paper or a multi-layered optimization problem, you must ascend. You define the invariants, map out the combinatorial search space, and decide on the overarching strategy.
 	
-	\begin{example}[AI tool]
-		Feed the massive documentation or core requirements into a wide-context model to get the big-picture scaffolding.
+	\begin{example}[AI Execution]
+		Feed full documentation or core specs into a wide-context model (e.g., Gemini Flash / Extended) to scaffold the architecture.
 	\end{example}
-	\item \textit{The frog dive (implementation \& rigor)}: Once the blueprint is locked, you must drop straight into the pond. You shut out the big picture \& focus entirely on micro-optimization: writing the core loop, handling edge cases, \& ensuring strict mathematical rigor.
 	
-	\begin{example}[AI tool]
-		Shift to a narrow, high-precision mode to refine specific functions, verify boundary conditions (like handling precise floor{\tt/}ceil intervals rather than lazy sweeps), \& eliminate syntax or type mismatches.
+	\item \emph{The Frog Dive (Implementation \& Rigor):} Once the blueprint is locked, you drop straight into the pond. You shut out the big picture and focus entirely on micro-optimization: core loops, edge cases, and strict mathematical rigor.
+	
+	\begin{example}[AI Execution]
+		Shift to a high-precision reasoning model (e.g., Gemini Pro Deep Think) to verify tight mathematical bounds (such as evaluating precise $\lfloor r_{\text{opt}} \rfloor$ and $\lceil r_{\text{opt}} \rceil$ limits rather than loose search windows) and resolve subtle type conflicts.
 	\end{example}
-	\item \textit{The eagle return (integration \& verification)}: After the local component is perfected, you zoom back out to verify how your local optimization interacts with the global system state.
+	
+	\item \emph{The Eagle Return (Integration \& Verification):} After the local component is perfected, zoom back out to verify how your local optimization integrates with the global system state.
 \end{enumerate}
 
-%------------------------------------------------------------------------------%
+\subsubsection{Cost of Shifting Perspectives}
 
-\subsubsection{Cost of shifting perspectives \& mindsets}
-
-\begin{remark}[Meta-thinking mode]
-	The idea of being able to shift between perspectives \& mindsets is itself a perspective \& a mindset
+\begin{remark}[Meta-Thinking Mode]
+	The capability to shift between perspectives and mindsets is itself a distinct high-level perspective and mindset.
 \end{remark}
-Shapeshifting is cognitively expensive. Constantly jumping from very high, e.g., $3\cdot10^4$ feet to the surface of mud causes mental whiplash. [insert Whiplash] The secret to managing this dilemma is \textit{deliberate phase-locking}---forcing yourself to stay in the eagle state long enough to finish architecture before diving into code, \& locking into the frog state long enough to build deep flow without getting distracted by peripheral system redesigns.
+
+Shapeshifting is cognitively expensive. Rapidly jumping between 30,000 feet and the granular details causes severe cognitive fatigue. The solution lies in \textit{deliberate phase-locking}---forcing yourself to remain in the eagle state long enough to solidify system architecture before writing code, and locking into the frog state long enough to reach deep flow without peripheral distractions.
 
 \begin{question}
 	When designing a complex system or tackling an intricate algorithmic challenge, do you find yourself naturally anchored to one mode, forcing you to consciously fight your instincts to shift to the other?
 \end{question}
 
 %------------------------------------------------------------------------------%
-
 \section{Some Psychological Decision Problems}
+%------------------------------------------------------------------------------%
 
-\begin{question}[Against narcissism]
-	When you encounter narcissists, what kind of decision problems that you must decide as soon as possible on how to treat these kind of people?
+\begin{question}[Navigating High-Conflict \& Narcissistic Dynamics]
+	When encountering highly manipulative or narcissistic individuals, what immediate tactical decision problems must be resolved to protect personal, professional, and psychological integrity?
 \end{question}
-We consider below more specific problems for this psychological decision problem.
 
-\begin{proof}[Psychological answer]
-	When encountering a narcissist---whether in a professional, academic, or personal setting---the immediate challenge is that standard rules of mutual respect, good-faith negotiation, \& direct communication do not apply. Because narcissist's behavior is often driven by a need for control, validation, or dominance, you are forced to make high-stakes tactical decisions very quickly to protect your time, reputation, \& emotional bandwidth.
-\end{proof}
+Standard assumptions of mutual good faith and reciprocal negotiation break down in these settings. Because their behavior is driven by a need for control, validation, or dominance, high-stakes tactical decisions must be made rapidly.
 
-
-\begin{problem}[Engagement boundary problem: zero-contact vs. transactional shielding]
-	\emph{Core dilemma:} Deciding immediately how much access this person has to you.
-	
+\begin{problem}[Engagement Boundary: Zero-Contact vs. Transactional Shielding]
+	\emph{Core Dilemma:} Deciding immediately how much access this individual is granted.
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Decision Strategy:} Rapidly assess whether complete elimination of contact (zero-contact) is viable, or if shared institutional/departmental environments necessitate a \textit{low-contact, strictly transactional} protocol (the Gray Rock method).
+		\item \emph{Trade-off:} Delaying this decision allows the individual to establish psychological leverage or operational entanglement, making subsequent separation exponentially more costly.
+	\end{enumerate}
 \end{problem}
 
-\begin{proof}[Psychological solution]
-	\item(i) \emph{Decision}: You must rapidly determine if complete elimination (zero-contact) is possible, or if you are locked into a shared environment (e.g., a workplace, department, or family structure) that requires a \textit{low-contact, strictly transactional} strategy.
-	\item(ii) \emph{Trade-off}: Delaying this boundary allows them to establish a foothold of psychological dependency or procedural entanglement, making future separation much harder.
-\end{proof}
-
-\begin{problem}[Information asymmetry problem: the ``gray rock'' threshold]
-	\emph{Core dilemma:} How much of your personal life, vulnerabilities, goals, or creative projects do you reveal?
-	
+\begin{problem}[Information Asymmetry: Exposure vs. Vulnerability Shielding]
+	\emph{Core Dilemma:} Determining the permissible depth of personal and intellectual disclosure.
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Decision Strategy:} Immediately halt all non-essential personal disclosures. Manipulative actors actively scan for vulnerabilities, career ambitions, or insecurities to exploit in future devaluation phases.
+		\item \emph{Trade-off:} While natural professional relationships thrive on candor, interaction in high-conflict settings requires restricting exchanges to objective, uninteresting, and purely factual statements.
+	\end{enumerate}
 \end{problem}
 
-\begin{proof}[Psychological solution]
-	\item(i) \emph{Decision:} You must decide to stop sharing anything of substance immediately. Narcissists scan for leverage points (e.g., insecurities, ambitions, or personal struggles) to use later for manipulation, triangulation, or devaluation.
-	\item(ii) \emph{Trade-off:} Absolute transparency feels natural in normal relationships, but with a narcissist, it acts as a self-sabotaging vulnerability. You must pivot to uninteresting, neutral, fact-based communication (the ``gray rock'' method) before they map your vulnerabilities.
-\end{proof}
-
-\begin{problem}[Evidence preservation problem: trusting agreements vs. ironclad paper trails]
-	Do you give them the benefit of the doubt on verbal commitments, shared workloads, or collaborative decisions?
+\begin{problem}[Conflict Trigger: Fact Correction vs. Escalation Containment]
+	\emph{Core Dilemma:} Deciding whether to publicly refute distortions or allow false narratives to pass uncorrected.
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Decision Strategy:} Choose between immediate truth-seeking and long-term resource preservation. Direct public correction often triggers disproportionate defensive reactions or protracted mudslinging.
+		\item \emph{Trade-off:} Correcting every misstatement drains cognitive bandwidth; however, total passivity risks letting false narratives become accepted precedent. Selective, documented correction is required.
+	\end{enumerate}
 \end{problem}
 
-\begin{proof}[Psychological solution]
-	\item(i) \emph{Decision}: You must instantly transition to an \textit{assume-bad-faith protocol}, ensuring every agreement, deadline, \& instruction is documented in writing (via email or written confirmation).	
-	\item(ii) \emph{Trade-off}: Operating with strict paper trails can feel overly formal or paranoid among normal peers, but with a narcissist, it is the only defense against gaslighting, rewritten history, \& stolen credit.
-\end{proof}
-
-\begin{problem}[Triangulation \& alliance problem: isolation vs. strategic visibility]
-	How do you handle their tendency to recruit third parties against you or pit people in your network against one another?
+\begin{problem}[Evidence Preservation: Verbal Trust vs. Paper Trail Protocol]
+	\emph{Core Dilemma:} Choosing between informal peer agreements and strict written documentation.
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Decision Strategy:} Instantly transition to an \textit{assume-bad-faith protocol}, ensuring every project scope, task allocation, and commitment is recorded in unambiguous written form (e.g., follow-up emails, written specifications).
+		\item \emph{Trade-off:} Operating with strict paper trails may feel overly bureaucratic to standard peers, but it serves as the sole defense against gaslighting, credit theft, and retrospective narrative revision.
+	\end{enumerate}
 \end{problem}
 
-\begin{proof}[Psychological solution]
-	\item(i) \emph{Decision}: You must decide whether to proactively warn or inoculate key stakeholders, or maintain a dignified, neutral distance that lets objective 3rd parties see the pattern of behavior on their own.	
-	\item(ii) \emph{Trade-off}: Actively defending yourself against triangulation can make yu look defensive or dramatic. Remaining entirely passive, however, gives the narcissist a temporary narrative monopoly.
-\end{proof}
+\begin{problem}[Triangulation \& Coalition Defense: Passive Neutrality vs. Strategic Visibility]
+	\emph{Core Dilemma:} Managing third-party manipulation and subterranean smear efforts.
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Decision Strategy:} Decide whether to proactively inform key stakeholders or maintain a dignified, neutral posture while demonstrating consistency over time.
+		\item \emph{Trade-off:} Proactive self-defense risks appearing overly defensive or dramatic, whereas complete silence allows manipulative narratives to establish an unchallenged foothold.
+	\end{enumerate}
+\end{problem}
 
 %------------------------------------------------------------------------------%
-
 \section{Some Philosophical Decision Problems}
-Tôi thấy người Nhật \& người Đức rất giỏi chuyện quyết định về mặt triết học.
-
 %------------------------------------------------------------------------------%
 
+Philosophical decision-making often presents a stark contrast between existential agency and pragmatic duty.
+
+\begin{problem}[The Existential Commitment Problem]
+	\emph{Core Dilemma:} Choosing between a Kierkegaardian existential leap (acting under fundamental uncertainty) and pragmatic systemic alignment.
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Decision Strategy:} Establish explicit stopping criteria for decision analysis to prevent endless philosophical paralysis.
+		\item \emph{Trade-off:} Over-analyzing philosophical alignment stalls execution, while hasty commitment without core alignment leads to long-term existential dissonance.
+	\end{enumerate}
+\end{problem}
+
+%------------------------------------------------------------------------------%
 \section{Some Life Decision Problems}
-If a man cannot afford a family, or he can create a happy family, then he should make friend with solitude.
-
 %------------------------------------------------------------------------------%
 
-\section{Miscellaneous -- Linh Tinh}
+\begin{problem}[Resource Allocation: Solitude vs. Domestic Burden]
+	\emph{Core Dilemma:} Balancing personal creative/scientific sovereignty with domestic and social obligations under constrained cognitive bandwidth.
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Decision Strategy:} If an individual cannot fully sustain the financial, emotional, and temporal requirements of a family unit without compromising core research/creative outputs, prioritizing purposeful solitude becomes the optimal default.
+		\item \emph{Trade-off:} Choosing solitude requires trade-offs in traditional social support structures, but preserves unconditional autonomy over one's time and intellectual focus.
+	\end{enumerate}
+\end{problem}
 
 %------------------------------------------------------------------------------%
+\section{Conclusion \& Future Work}
+%------------------------------------------------------------------------------%
+
+Taxonomizing decision problems across academic, psychological, and life domains provides a structured heuristic for navigating complexity. Future work will further formalize these frameworks using dynamic programming formulations and decision-tree architectures.
 
 \printbibliography[heading=bibintoc]
-	
+
 \end{document}
