@@ -1,4 +1,9 @@
-\documentclass{article}
+\documentclass[11pt]{article}
+\usepackage{microtype}
+\usepackage{booktabs}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
 \usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -49,9 +54,9 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	This essay examines the intersection of scientific beauty and human experience through twelve distinct aesthetic categories: reduction, geometric simplicity, mathematical duality, structural resonance, formal genius, pattern inevitability, pedagogical exposition, hyper-reflexive consciousness, logical incompleteness, physical minimalism, environmental friction, emergence, and human vulnerability. Moving from Euler's identity, Dennis Sullivan's topology, and the Fourier transform to impedance matching, Gale-Shapley market equilibria, and the contrasting problem-solving styles of Leonhard Euler, Alexander Grothendieck, Edsger Dijkstra, Srinivasa Ramanujan, G. H. Hardy, Paul R. Halmos, and David Foster Wallace, the essay pairs mathematical abstraction with physical manifestations, such as Bruce Lee's Jeet Kune Do and fluid dynamics. Interspersed with hyper-detailed, footnote-driven interrogations of formal logic, historical ironies, and human behavior, the piece argues that scientific elegance is not an escape from human messiness, but its structural origin story.
+This essay examines the intersection of scientific beauty and human experience through twelve distinct aesthetic categories: reduction, geometric simplicity, mathematical duality, structural resonance, formal genius, pattern inevitability, pedagogical exposition, hyper-reflexive consciousness, logical incompleteness, physical minimalism, environmental friction, emergence, and human vulnerability. Moving from Euler's identity, Dennis Sullivan's topology, and the Fourier transform to impedance matching, Gale-Shapley market equilibria, and the contrasting problem-solving styles of Leonhard Euler, Alexander Grothendieck, Edsger Dijkstra, Srinivasa Ramanujan, G. H. Hardy, Paul R. Halmos, and David Foster Wallace, the essay pairs mathematical abstraction with physical manifestations, such as Bruce Lee's Jeet Kune Do and fluid dynamics. Interspersed with hyper-detailed, footnote-driven interrogations of formal logic, historical ironies, and human behavior, the piece argues that scientific elegance is not an escape from human messiness, but its structural origin story.
 
-    Bài tiểu luận này khảo sát điểm giao thoa giữa vẻ đẹp khoa học \& trải nghiệm nhân sinh thông qua mười hai phạm trù thẩm mỹ biệt lập: sự tối giản, tính giản dị hình học, tính đối ngẫu toán học, sự cộng hưởng cấu trúc, thiên tài hình thức, tính tất yếu của khuôn mẫu, nghệ thuật diễn giải sư phạm, tâm thức siêu phản thân, tính bất toàn logic, chủ nghĩa tối giản vật lý, ma sát môi trường, sự nảy sinh, \& tính dễ tổn thương của con người. Khởi đi từ đồng nhất thức Euler, tô-pô học của Dennis Sullivan, \& phép biến đổi Fourier, cho đến sự phối hợp trở kháng, trạng thái cân bằng thị trường Gale-Shapley, cùng với các phong cách giải quyết vấn đề đối nghịch nhau của Leonhard Euler, Alexander Grothendieck, Edsger Dijkstra, Srinivasa Ramanujan, G. H. Hardy, Paul R. Halmos, \& David Foster Wallace, bài tiểu luận sóng đôi sự trừu tượng toán học với các biểu hiện vật lý, chẳng hạn như Tiệt Quyền Đạo của Lý Tiểu Long \& động lực học chất lưu. Được điểm xuyết bởi những màn tra vấn siêu chi tiết, dày đặc chú thích về logic hình thức, những nghịch lý lịch sử, \& hành vi con người, tác phẩm này lập luận rằng sự thanh tao của khoa học không phải là 1 lối thoát khỏi sự hỗn độn của nhân loại, mà chính là cội nguồn cấu trúc của nó.
+Bài tiểu luận này khảo sát điểm giao thoa giữa vẻ đẹp khoa học \& trải nghiệm nhân sinh thông qua mười hai phạm trù thẩm mỹ biệt lập: sự tối giản, tính giản dị hình học, tính đối ngẫu toán học, sự cộng hưởng cấu trúc, thiên tài hình thức, tính tất yếu của khuôn mẫu, nghệ thuật diễn giải sư phạm, tâm thức siêu phản thân, tính bất toàn logic, chủ nghĩa tối giản vật lý, ma sát môi trường, sự nảy sinh, \& tính dễ tổn thương của con người. Khởi đi từ đồng nhất thức Euler, tô-pô học của Dennis Sullivan, \& phép biến đổi Fourier, cho đến sự phối hợp trở kháng, trạng thái cân bằng thị trường Gale-Shapley, cùng với các phong cách giải quyết vấn đề đối nghịch nhau của Leonhard Euler, Alexander Grothendieck, Edsger Dijkstra, Srinivasa Ramanujan, G. H. Hardy, Paul R. Halmos, \& David Foster Wallace, bài tiểu luận sóng đôi sự trừu tượng toán học với các biểu hiện vật lý, chẳng hạn như Tiệt Quyền Đạo của Lý Tiểu Long \& động lực học chất lưu. Được điểm xuyết bởi những màn tra vấn siêu chi tiết, dày đặc chú thích về logic hình thức, những nghịch lý lịch sử, \& hành vi con người, tác phẩm này lập luận rằng sự thanh tao của khoa học không phải là 1 lối thoát khỏi sự hỗn độn của nhân loại, mà chính là cội nguồn cấu trúc của nó.
 \end{abstract}
 \tableofcontents
 
@@ -67,9 +72,9 @@
 
 Bạn đã bao giờ chứng kiến 1 kẻ mô phỏng chưa? Tựa như 1 thực thể có khả năng biến hình, hóa thân thành bất kỳ hình hài nào mà y khao khát. Có lẽ không phải là 1 kẻ mô phỏng hoàn mỹ, nhưng ít nhất, tôi đang nỗ lực để trở thành bản mô phỏng của 1 kẻ mô phỏng hoàn mỹ.
 
-\textsf{[H, 29, writer wannabe; embedded a little bit of E. B. White's writing style]:} There is a quiet, almost domestic grace in the way a drop of cold half-\&-half blooms inside hot coffee, unfolding in delicate, turbulent plumes that fluid dynamicists call \textit{Rayleigh--Taylor instability}, though to anyone in a sunlit kitchen at 7:00 in the morning, it is simply the 1st nice thing to happen all day. We are conditioned (how \& why?) to look for scientific beauty in clean, abstract places: on state-grey whiteboards, inside 5-line proofs, or nestled within equations whose terms cancel out with a tidy, frictionless snap. Yet the actual aesthetic of the world is rarely so sanitized. It exists in the strange overlap where pristine physical laws meet the sticky, asymmetric reality of daily life, where the same differential equations governing galactic rotation are also, with unbothered mechanical precision, calculating the exact parabolic splatter of a dropped jar of marmalade on kitchen linoleum.
+\textsf{[H, 29, writer wannabe; embedded a little bit of E. B. White's writing style]:} There is a grim, thermodynamic finality in the way a drop of cold half-\&-half detonates inside hot coffee. It unfolds in delicate, turbulent plumes of \textit{Rayleigh--Taylor instability} (a violent micro-collapse of entropy that, to a human observer at 7:00 in the morning, masquerades as domestic grace). We are conditioned (how \& why?) to look for scientific beauty in clean, abstract places: on state-grey whiteboards, inside 5-line proofs, or nestled within equations whose terms cancel out with a tidy, frictionless snap. Yet the actual aesthetic of the world is rarely so sanitized. It thrives in the violent overlap where pristine formalism collides with sticky, asymmetrical reality; where the exact same tensor calculus governing the orbital decay of a dying star is currently, with unbothered, fatalistic precision, computing the maximum blast radius of a dropped jar of marmalade across kitchen linoleum.
 
-\textsf{[H, 29 tuổi, tập tành viết lách; pha trộn đôi chút văn phong của E. B. White]:} Tồn tại 1 nét duyên dáng tĩnh tại, gần như mang tính nội trợ, trong cái cách mà 1 giọt kem half-\&-half lạnh giá nở bung giữa lòng tách cà phê nóng hổi, cuộn trào thành những luồng chùm tinh tế \& nhiễu loạn mà các nhà động lực học chất lưu gọi là \textit{sự bất ổn định Rayleigh--Taylor}, mặc dù đối với bất kỳ ai đang đứng trong gian bếp ngập nắng vào lúc 7 giờ sáng, đó đơn thuần là điều tốt đẹp đầu tiên xảy đến trong ngày. Chúng ta đã bị lập trình (bằng cách nào \& tại sao?) để tìm kiếm vẻ đẹp khoa học ở những chốn trừu tượng \& vô trùng: trên những tấm bảng trắng xám xịt, bên trong những hệ thức chứng minh dài vỏn vẹn năm dòng, hay nằm gọn lỏn giữa những phương trình mà các vế triệt tiêu lẫn nhau với 1 tiếng tách gọn gàng, phi ma sát. Thế nhưng, tính thẩm mỹ thực thụ của thế giới này hiếm khi nào được sát trùng kỹ lưỡng đến vậy. Nó hiện hữu tại điểm giao thoa kỳ lạ, nơi các định luật vật lý nguyên sơ va chạm với thực tại nhầy nhụa \& bất đối xứng của đời sống thường nhật, nơi chính những phương trình vi phân chi phối chuyển động quay của dải thiên hà cũng đồng thời, với 1 sự chính xác cơ học lạnh lùng, tính toán ra quỹ đạo parabol văng vãi tuyệt đối của 1 hũ mứt cam vừa bị đánh rơi trên sàn bếp linoleum.
+\textsf{[H, 29 tuổi, tập tành viết lách; pha trộn đôi chút văn phong của E. B. White]:} Tồn tại một tính chung cuộc tàn khốc, mang đậm sắc thái nhiệt động lực học trong cái cách mà một giọt kem lạnh (half-\&-half) phát nổ giữa lòng tách cà phê nóng rẫy. Nó cuộn trào thành những luồng chùm tinh tế, nhiễu loạn của \textit{sự bất ổn định Rayleigh--Taylor} (một vi-sụp đổ bạo liệt của entropy mà đối với một kẻ quan sát nhân sinh vào lúc 7 giờ sáng, lại đội lốt một nét duyên dáng nội trợ). Chúng ta đã bị lập trình (bằng cách nào \& tại sao?) để tìm kiếm vẻ đẹp khoa học ở những chốn trừu tượng \& vô trùng: trên những tấm bảng trắng xám xịt, bên trong những hệ thức chứng minh dài vỏn vẹn năm dòng, hay nằm gọn lỏn giữa những phương trình mà các vế triệt tiêu lẫn nhau với 1 tiếng tách gọn gàng, phi ma sát. Thế nhưng, tính thẩm mỹ thực thụ của thế giới này hiếm khi nào được sát trùng kỹ lưỡng đến vậy. Nó sinh sôi ở điểm giao thoa bạo lực nơi chủ nghĩa hình thức nguyên sơ va đập với thực tại nhầy nhụa, bất đối xứng; nơi mà chính phép tính tensor (tensor calculus) chi phối sự suy rã quỹ đạo của một ngôi sao đang hấp hối cũng đang đồng thời, với một sự chính xác lạnh lùng \& định mệnh, tính toán ra bán kính công phá cực đại của một hũ mứt cam vừa bị rơi vỡ trên sàn bếp linoleum.
 
 \textit{Do you want to discover numerous forms of aestheticity?}
 
@@ -187,11 +192,11 @@ There is a distinct, kinetic beauty in the absolute refusal to waste energy. If 
 
 Tồn tại 1 vẻ đẹp động học, rành mạch trong sự khước từ tuyệt đối việc lãng phí năng lượng. Nếu sự tối giản toán học là cuộc theo đuổi tính tiết kiệm trên 1 tấm bảng đen, thì chủ nghĩa tối giản chính là sự thực thi vật lý của nó trong thời gian thực. Ta thường xuyên nhầm lẫn chủ nghĩa tối giản với 1 bộ môn thuần túy thị giác, những công trình kiến trúc trơ trọi, vô trùng hay những phòng trưng bày trống hoác, mênh mông. Nhưng chủ nghĩa tối giản đích thực không xoay quanh những khoảng không trống rỗng; nó xoay quanh sự loại trừ mọi lời mào đầu. Nó là tính thẩm mỹ của sự không-do-dự (zero hesitation), 1 biểu hiện sinh học của Nguyên lý Tác dụng Tối thiểu (Principle of Least Action).
 
-In physics, Hamilton's Principle dictates that any dynamic system (whether a photon bending around a star or a dropped coffee mug plummeting toward the linoleum) will naturally traverse the specific path that minimizes the action integral:
+In classical mechanics, Hamilton's Principle decrees that any dynamic system (whether a supermassive black hole devouring a photon or a tragically fumbled coffee mug plummeting toward its inevitable destruction on the linoleum) is bound by the exact same geometric fate. It will blindly and flawlessly traverse the singular trajectory that minimizes the action integral:
 \[ \mathcal{S} = \int_{t_1}^{t_2} \left( T - V \right) dt \]
-Nature is fundamentally stingy; it refuses to expend surplus energy. Nowhere is this more brilliantly weaponized than in martial arts, specifically in Bruce Lee's development of Jeet Kune Do (The Way of the Intercepting Fist). Before Lee, combat systems were largely additive. A practitioner accumulated rigid forms and intricate katas that looked elegant in a courtyard but frequently shattered under the chaotic friction of a live fight. Lee defined his method as a relentless hacking away of the unessential.
+The universe is pathologically stingy; it refuses to subsidize surplus energy for our clumsiness. Nowhere is this more brilliantly weaponized than in martial arts, specifically in Bruce Lee's development of Jeet Kune Do (The Way of the Intercepting Fist). Before Lee, combat systems were largely additive. A practitioner accumulated rigid forms and intricate katas that looked elegant in a courtyard but frequently shattered under the chaotic friction of a live fight. Lee defined his method as a relentless hacking away of the unessential.
 
-Trong vật lý, Nguyên lý Hamilton phán quyết rằng bất kỳ hệ động lực nào (cho dù là 1 hạt photon uốn cong quanh 1 ngôi sao hay 1 chiếc cốc cà phê bị đánh rơi đang lao cắm đầu xuống sàn linoleum) sẽ tự nhiên vạch ra 1 quỹ đạo cụ thể nhằm cực tiểu hóa tích phân tác dụng:
+Trong cơ học cổ điển, Nguyên lý Hamilton phán truyền rằng bất kỳ hệ động lực nào (cho dù là một hố đen siêu khối lượng đang nuốt chửng một hạt photon hay một chiếc cốc cà phê bị tuột tay một cách bi thảm đang lao cắm đầu vào sự diệt vong tất yếu của nó trên sàn linoleum) cũng đều bị trói buộc bởi cùng một định mệnh hình học. Nó sẽ mù quáng \& hoàn mỹ băng qua một quỹ đạo duy nhất nhằm cực tiểu hóa tích phân tác dụng:
 \[ \mathcal{S} = \int_{t_1}^{t_2} \left( T - V \right) dt \]
 Tự nhiên về cơ bản là keo kiệt; nó khước từ việc tiêu xài năng lượng thặng dư. Không nơi nào mà điều này được vũ khí hóa 1 cách rực rỡ hơn trong võ thuật, đặc biệt là trong sự phát triển môn Tiệt Quyền Đạo (Jeet Kune Do) của Lý Tiểu Long. Trước thời Lý, các hệ thống chiến đấu phần lớn mang tính cộng gộp. Một môn sinh sẽ tích lũy các khuôn mẫu cứng nhắc \& những bài kata cầu kỳ trông có vẻ thanh tao giữa sân tập nhưng lại thường xuyên vỡ vụn dưới lực ma sát hỗn loạn của 1 trận thực chiến. Lý định nghĩa phương pháp của mình là 1 sự đẽo gọt không khoan nhượng những gì không thiết yếu.
 
@@ -221,11 +226,11 @@ Trong cơ học sóng \& sinh học, sự khớp nối này là vật lý của 
 In discrete mathematics and market design, alignment moves from physical shapes to multi-agent preference topologies. Consider the Gale-Shapley Deferred Acceptance Algorithm, which proves that for any set of agents with subjective preference rankings, there exists a \emph{stable matching}, a state where no unpartnered pair strictly prefers each other over their assigned partners.\footnote{The real-world impact of stable matching theory is vast: Alvin Roth adapted the Gale-Shapley framework to design the National Resident Matching Program (NRMP), which pairs thousands of graduating medical students with hospital residency programs across the United States every year, as well as the algorithm governing regional kidney exchange clearinghouses, matching donor organs with compatible recipients based on complex blood-type and antibody constraints.
 	
 	\textsf{Bản dịch:} Tác động thế giới thực của lý thuyết bắt cặp ổn định là vô cùng rộng lớn: Alvin Roth đã điều chỉnh bộ khung Gale-Shapley để thiết kế Chương trình Bắt cặp Bác sĩ Nội trú Quốc gia (NRMP), chương trình bắt cặp hàng ngàn sinh viên y khoa tốt nghiệp với các chương trình bác sĩ nội trú của các bệnh viện trên khắp Hoa Kỳ mỗi năm, cũng như thuật toán chi phối các trung tâm trao đổi thận khu vực, bắt cặp những cơ quan nội tạng hiến tặng với những người nhận tương thích dựa trên những ràng buộc phức tạp về nhóm máu \& kháng thể.} A continuous analog governs optimal transport theory via the \emph{Wasserstein distance}:
-\[ W_1(\mu, \nu) = \inf_{\gamma\in\Pi(\mu,\nu)} \mathbb{E}_{(x,y)\sim\gamma} \big[\|x - y\|\big] \]
+\[ W_1(\mu, \nu)\coloneqq\inf_{\gamma\in\Pi(\mu,\nu)} \mathbb{E}_{(x,y)\sim\gamma} \big[\|x - y\|\big] \]
 which calculates the least-action mapping required to reshape one probability distribution into another without a single millimeter of redundant displacement.
 
 Trong toán học rời rạc \& thiết kế thị trường, sự dóng hàng dịch chuyển từ những hình thù vật lý sang các tô-pô ưu tiên đa tác tử. Hãy xem xét Thuật toán Chấp thuận Trì hoãn Gale-Shapley (Gale-Shapley Deferred Acceptance Algorithm), 1 thuật toán chứng minh rằng đối với bất kỳ tập hợp tác tử nào có các bảng xếp hạng ưu tiên chủ quan, luôn tồn tại 1 \emph{sự bắt cặp ổn định} (stable matching), 1 trạng thái mà ở đó không có bất kỳ cặp đôi chưa ghép cặp nào lại thích nhau 1 cách tuyệt đối hơn so với các đối tác đã được chỉ định của họ. Một dạng thức liên tục tương tự chi phối lý thuyết vận chuyển tối ưu (optimal transport theory) thông qua \emph{khoảng cách Wasserstein}:
-\[ W_1(\mu, \nu) = \inf_{\gamma\in\Pi(\mu,\nu)} \mathbb{E}_{(x,y)\sim\gamma} \big[\|x - y\|\big] \]
+\[ W_1(\mu, \nu)\coloneqq\inf_{\gamma\in\Pi(\mu,\nu)} \mathbb{E}_{(x,y)\sim\gamma} \big[\|x - y\|\big] \]
 thứ tính toán ánh xạ tác dụng-tối-thiểu cần thiết để định hình lại 1 phân phối xác suất này thành 1 phân phối xác suất khác mà không lãng phí 1 milimet dịch chuyển thừa thãi nào.
 
 In psychology and philosophy, resonance manifests as the elimination of cognitive friction. Mihaly Csikszentmihalyi \cite{Csikszentmihalyi_flow} formalized \emph{Flow} as the precise vector match where environmental challenge ($C$) equals personal skill ($S$), consuming 100\% of working memory so that self-consciousness vanishes.
@@ -243,13 +248,13 @@ Trong tâm lý học \& triết học, sự cộng hưởng phô bày chính nó
 
     % Axes
     \draw[->, thick] (0,0) -- (5.5,0) node[below, align=center] {Skill / Kỹ năng ($S$)};
-    \draw[->, thick] (0,0) -- (0,3.5) node[above, rotate=90, anchor=south, xshift=-1.5cm, align=center] {Challenge / Thử thách ($C$)};
+    \draw[->, thick] (0,0) -- (0,3.5) node[above, rotate=90, anchor=south, xshift=-1.5cm, align=center] {challenge/thử thách ($C$)};
 
     % Labels
-    \node[text=red!70!black, font=\bfseries, align=center] at (1.2, 2.4) {[ Anxiety / Âu lo ]};
-    \node[text=orange!70!black, font=\bfseries, align=center] at (3.8, 0.6) {[ Boredom / Buồn tẻ ]};
-    \node[text=blue!70!black, font=\bfseries, rotate=31, align=center] at (2.5, 1.5) {\emph{[ FLOW STATE / DÒNG CHẢY ]} \\ ($C \approx S$)};
-    \node[text=gray!80!black, font=\bfseries, align=center] at (0.7, 0.35) {[ Apathy / Thờ ơ ]};
+    \node[text=red!70!black, font=\bfseries, align=center] at (1.2, 2.4) {anxiety/lo âu};
+    \node[text=orange!70!black, font=\bfseries, align=center] at (3.8, 0.6) {boredom/buồn tẻ, chán nản]};
+    \node[text=blue!70!black, font=\bfseries, rotate=31, align=center] at (2.5, 1.5) {\emph{flow state/dòng chảy} \\ ($C \approx S$)};
+    \node[text=gray!80!black, font=\bfseries, align=center] at (0.7, 0.35) {apathy/thờ ơ ]};
 \end{tikzpicture}
 \end{center}
 When $C \gg S$, the organism collapses into crippling anxiety; when $S \gg C$, the mind drifts into stagnant boredom. Flow exists along the razor-thin diagonal where $C \approx S$, where the demands of the external task perfectly match the maximum bandwidth of the individual's cognitive capacity. In flow, self-consciousness vanishes because 100\% of available working memory is consumed by the task. The actor and the action achieve a state of functional identity.
@@ -265,40 +270,40 @@ Trong khoa học thần kinh xã hội, các dàn máy chụp cộng hưởng t�
 \emph{Alignment Matrix Across Disciplines}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Domain} & \emph{Low Alignment State (Friction / Reflection)} & \emph{High Alignment State (Resonance / Fit)} \\
-\hline
+\midrule
 \emph{Physics \& Acoustics} & Impedance mismatch; signal reflection, echo, energy loss. & Impedance matching; zero reflection, maximum power transfer. \\
-\hline
+
 \emph{Biochemistry} & Misfolded protein; inert non-binding molecular collision. & Induced fit; lock-and-key enzymatic catalysis. \\
-\hline
+
 \emph{Economics \& Math} & Unstable market matching; active incentives for betrayal. & Gale-Shapley equilibrium; Wasserstein optimal transport. \\
-\hline
+
 \emph{Psychology} & Anxiety ($C > S$) or Boredom ($S > C$); cognitive dissonance. & Flow state ($C \approx S$); interpersonal neural phase-locking. \\
-\hline
+
 \emph{AI Philosophy} & Proxy failure (Paperclip Maximizer / Goodhart's Law). & Value alignment; loss function congruent with human flourishing. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
 \emph{Ma trận Gióng hàng Xuyên Kỷ luật}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Miền (Domain)} & \emph{Trạng thái Gióng hàng Thấp (Ma sát / Sự phản xạ)} & \emph{Trạng thái Gióng hàng Cao (Sự cộng hưởng / Khớp nối)} \\
-\hline
+\midrule
 \emph{Vật lý \& Âm học} & Bất tương xứng trở kháng; phản xạ tín hiệu, tiếng vang, mất năng lượng. & Phối hợp trở kháng; không phản xạ, chuyển giao công suất cực đại. \\
-\hline
+
 \emph{Hóa sinh} & Protein cuộn gập sai; va chạm phân tử trơ, không liên kết. & Khớp cảm ứng; xúc tác enzyme theo mô hình chìa khóa-và-ổ khóa. \\
-\hline
+
 \emph{Kinh tế \& Toán học} & Bắt cặp thị trường bất ổn; có động cơ chủ động để phản bội. & Điểm cân bằng Gale-Shapley; vận chuyển tối ưu Wasserstein. \\
-\hline
+
 \emph{Tâm lý học} & Âu lo ($C > S$) hoặc Buồn tẻ ($S > C$); bất hòa nhận thức. & Trạng thái Dòng chảy ($C \approx S$); khóa pha thần kinh liên cá nhân. \\
-\hline
+
 \emph{Triết học AI} & Lỗi đại diện (Bộ máy Tối đa hóa Kẹp giấy / Định luật Goodhart). & Gióng hàng giá trị; hàm mất mát tương đẳng với sự hưng thịnh của nhân loại. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -340,6 +345,8 @@ Cùng 1 thuật giả kim ấy định nghĩa tập hợp Mandelbrot, bị chi p
 If brute-force calculation is the crude hammering of a stubborn nut, the history of formal science offers radically distinct cognitive archetypes for how beauty is recognized before it is proven. For the legendary minds of mathematics and computing, style was never a decorative flourish; it was the fundamental lens through which truth was perceived.
 
 Leonhard Euler embodied the aesthetic of \emph{unbounded algebraic fluency}. To Euler, algebra was not a static toolset but a living, malleable fluid. His genius lay in his ability to treat infinite expressions, divergent series, and trigonometric functions with the casual, play-filled confidence of a child stacking blocks. In solving the Basel Problem ($\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$), he dared to treat the infinite Taylor series for $\sin(x)/x$ as a standard, finite polynomial with an infinite number of roots, factoring it into an infinite product.\footnote{Treating an infinite polynomial like a finite one without rigorously establishing uniform convergence or applying the Weierstrass factorization theorem is a massive logical leap that would get a modern undergraduate failed instantly in Real Analysis. But Euler possessed an uncanny physical intuition for which formal manipulations were ``safe'' even when the rigorous foundations (which Cauchy and Weierstrass wouldn't formalize for another century) had not yet been invented.} Euler's aesthetic was one of pure operational momentum: write down a functional relationship, manipulate its symbols with audacious, flawless arithmetic grammar, and watch the underlying invariants assemble themselves on the page.
+
+Leonhard Euler hiện thân cho tính thẩm mỹ của \emph{sự trôi chảy đại số không biên giới} (unbounded algebraic fluency). Đối với Euler, đại số không phải là 1 bộ công cụ tĩnh tại mà là 1 chất lưu sống động, dễ uốn nắn. Thiên tài của ông nằm ở khả năng thao tác với các biểu thức vô hạn, chuỗi phân kỳ, \& các hàm lượng giác bằng 1 sự tự tin giản dị, đầy tính vui đùa của 1 đứa trẻ xếp các khối hình. Trong việc giải Bài toán Basel ($\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$), ông đã cả gan coi chuỗi Taylor vô hạn của $\sin(x)/x$ như 1 đa thức hữu hạn, tiêu chuẩn với vô số nghiệm, phân tích nó thành 1 tích vô hạn.\footnote{Việc coi 1 đa thức vô hạn như 1 đa thức hữu hạn mà không thiết lập 1 cách nghiêm ngặt sự hội tụ đều hay áp dụng định lý phân tích Weierstrass là 1 cú nhảy vọt logic khổng lồ có thể khiến 1 sinh viên đại học hiện đại rớt môn Giải tích Thực (Real Analysis) ngay lập tức. Nhưng Euler sở hữu 1 trực giác vật lý phi thường về việc những thao tác hình thức nào là ``an toàn'' ngay cả khi các nền tảng nghiêm ngặt (thứ mà Cauchy \& Weierstrass sẽ không hình thức hóa cho đến cả thế kỷ sau) vẫn chưa được phát minh.} Tính thẩm mỹ của Euler là 1 động lượng vận hành thuần túy: viết ra 1 mối quan hệ hàm số, thao tác các ký hiệu của nó bằng 1 ngữ pháp số học táo bạo, không tì vết, \& chứng kiến các bất biến nền tảng tự lắp ráp lại với nhau trên trang giấy.
 
 Alexander Grothendieck championed the aesthetic of \emph{conceptual submersion}, his famous \textit{mer montante}, or rising sea \cite{grothendieck1986recoltes}. When facing a formidable problem in algebraic geometry, he refused to attack it directly. Instead, he submerged the landscape in a gradually rising tide of general definitions, building vast machinery, schemes, toposes, motives, until the hard nut of the problem softened, dissolved, and opened effortlessly under gentle pressure. Grothendieck solved problems by redefining space itself, making once-intractable theorems look like obvious, trivial corollaries of a higher geometric home.
 
@@ -404,36 +411,36 @@ Nghiên cứu của chính ông trong lý thuyết toán tử không gian Hilber
 \emph{Halmosian Aesthetic Axis}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Dimension} & \emph{Obfuscated Formalism} & \emph{The Halmosian Canon} \\
-\hline
+\midrule
 \emph{Primary Goal} & Auditing formal correctness for a compiler or expert peer. & Maximal conceptual transparency and human illumination. \\
-\hline
+
 \emph{Role of Notation} & Dense, symbolic shorthand introduced upfront. & Minimalist, intuitive syntax introduced only after narrative context. \\
-\hline
+
 \emph{Pedagogical Mode} & Passive lecture; presenting finished, polished theories. & Active problem-solving; ``Mathematics is not a spectator sport.'' \\
-\hline
+
 \emph{Medium} & Opaque lemmas and unpunctuated derivations. & Clear narrative structure, intuitive examples, and the clean $\blacksquare$. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
 \emph{Trục Thẩm mỹ Halmos}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Chiều kích (Dimension)} & \emph{Chủ nghĩa Hình thức Bị làm mờ (Obfuscated Formalism)} & \emph{Quy điển Halmos (The Halmosian Canon)} \\
-\hline
+\midrule
 \emph{Mục tiêu Chính} & Kiểm toán tính đúng đắn hình thức cho 1 trình biên dịch hoặc đồng nghiệp chuyên gia. & Sự minh bạch khái niệm tối đa \& sự khai sáng cho con người. \\
-\hline
+
 \emph{Vai trò của Ký hiệu} & Tốc ký ký hiệu dày đặc được giới thiệu ngay từ đầu. & Cú pháp tối giản, trực giác chỉ được giới thiệu sau bối cảnh tự sự. \\
-\hline
+
 \emph{Phương thức Sư phạm} & Bài giảng thụ động; trình bày các lý thuyết đã được mài nhẵn, hoàn thiện. & Giải quyết vấn đề chủ động; ``Toán học không phải là 1 môn thể thao khán giả.'' \\
-\hline
+
 \emph{Phương tiện} & Các bổ đề mờ đục \& những chuỗi suy diễn không được chấm câu. & Cấu trúc tự sự rõ ràng, các ví dụ trực giác, \& 1 điểm dừng $\blacksquare$ rành mạch. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -503,9 +510,12 @@ Pascal's first great aesthetic contribution to the philosophy of mind is his div
 
 \begin{itemize}
     \item \emph{The Geometric Mind (Esprit de G\'eom\'etrie):} Operates on few principles, but these principles are stark, explicit, and detached from common experience. It thrives on slow, linear deduction, moving step by step through axioms, lemmas, and proofs. Its beauty is one of structural inevitability, but its flaw is blindness: if a truth is not explicitly defined at the outset, the geometric mind cannot see it at all.
-    \item \emph{Tâm trí Hình học (Esprit de G\'eom\'etrie):} Hoạt động trên 1 số ít nguyên lý, nhưng những nguyên lý này thì trần trụi, hiển ngôn, \& tách biệt khỏi những trải nghiệm thông thường. Nó sinh sôi nảy nở trên sự suy diễn chậm rãi, tuyến tính, di chuyển từng bước qua các tiên đề, bổ đề, \& phép chứng minh. Vẻ đẹp của nó là vẻ đẹp của tính tất yếu cấu trúc, nhưng khiếm khuyết của nó là sự mù lòa: nếu 1 chân lý không được định nghĩa 1 cách hiển ngôn ngay từ ban đầu, tâm trí hình học hoàn toàn không thể nhìn thấy nó.
-    \item \emph{The Intuitive Mind (Esprit de Finesse):} Operates on an infinity of subtle, delicate principles that are everywhere in daily life but impossible to formalize into a simple list of axioms. It does not calculate; it perceives \textit{d'un seul coup d'\oe il}, at a single glance. It recognizes grace, moral nuance, tone, and character without needing to audit the underlying steps.
-    \item \emph{Tâm trí Trực giác (Esprit de Finesse):} Hoạt động trên 1 sự vô hạn của những nguyên lý tinh tế, vi tế luôn hiện diện khắp nơi trong đời sống thường nhật nhưng không thể nào hình thức hóa thành 1 danh sách tiên đề đơn giản. Nó không tính toán; nó nhận thức \textit{d'un seul coup d'\oe il}, chỉ bằng 1 cái liếc mắt. Nó nhận diện được nét duyên dáng, sắc thái đạo đức, tông giọng, \& tính cách mà không cần phải kiểm toán các bước nền tảng.
+
+\item \emph{Tâm trí Hình học (Esprit de G\'eom\'etrie):} Hoạt động trên 1 số ít nguyên lý, nhưng những nguyên lý này thì trần trụi, hiển ngôn, \& tách biệt khỏi những trải nghiệm thông thường. Nó sinh sôi nảy nở trên sự suy diễn chậm rãi, tuyến tính, di chuyển từng bước qua các tiên đề, bổ đề, \& phép chứng minh. Vẻ đẹp của nó là vẻ đẹp của tính tất yếu cấu trúc, nhưng khiếm khuyết của nó là sự mù lòa: nếu 1 chân lý không được định nghĩa 1 cách hiển ngôn ngay từ ban đầu, tâm trí hình học hoàn toàn không thể nhìn thấy nó.
+
+\item \emph{The Intuitive Mind (Esprit de Finesse):} Operates on an infinity of subtle, delicate principles that are everywhere in daily life but impossible to formalize into a simple list of axioms. It does not calculate; it perceives \textit{d'un seul coup d'\oe il}, at a single glance. It recognizes grace, moral nuance, tone, and character without needing to audit the underlying steps.
+
+\item \emph{Tâm trí Trực giác (Esprit de Finesse):} Hoạt động trên 1 sự vô hạn của những nguyên lý tinh tế, vi tế luôn hiện diện khắp nơi trong đời sống thường nhật nhưng không thể nào hình thức hóa thành 1 danh sách tiên đề đơn giản. Nó không tính toán; nó nhận thức \textit{d'un seul coup d'\oe il}, chỉ bằng 1 cái liếc mắt. Nó nhận diện được nét duyên dáng, sắc thái đạo đức, tông giọng, \& tính cách mà không cần phải kiểm toán các bước nền tảng.
 \end{itemize}
 
 For Pascal, true intellectual beauty requires recognizing that attempting to apply the \textit{esprit de g\'eom\'etrie} to human life is an act of violence. You cannot calculate love using a proof, nor can you solve a moral crisis using a matrix. The highest form of intellect is knowing which mind to deploy, and recognizing that the subtle mind sees instantly what the geometric mind spends a lifetime trying to compute.
@@ -551,11 +561,7 @@ When the closed, cozy, geocentric medieval cosmos exploded into the vast, silent
 Khi cái vũ trụ thời Trung cổ khép kín, ấm cúng, lấy Trái đất làm trung tâm (geocentric) bùng nổ thành cái không gian Newton vô tận, tĩnh lặng, \& rộng lớn, nhân loại đã đánh mất sân khấu trung tâm của mình. Pascal nhận ra rằng văn hóa loài người phần lớn là 1 cơ chế đối phó tuyệt vọng, khổng lồ nhằm tránh né việc phải đối mặt với sự tĩnh lặng này. Ông gọi cái xung động phổ quát này của con người là \textit{divertissement} (sự xao nhãng). Chúng ta chơi bi-da, chạy đua thăng tiến học thuật, lao vào những cuộc cạnh tranh chính trị, \& cuộn qua vô tận những bảng tin (feeds) không phải vì những hoạt động này có giá trị nội tại, mà bởi vì chúng lấp đầy sự tĩnh lặng. Trong 1 trong những quan sát nổi tiếng nhất của mình, Pascal viết:
 
 \begin{quote}
-``All of man's unhappiness stems from one single fact: that he cannot sit quietly in his own room alone.''
-\end{quote}
-
-\begin{quote}
-``All of man's unhappiness stems from one single fact: that he cannot sit quietly in his own room alone.'\
+``All of man\'s unhappiness stems from one single fact: that he cannot sit quietly in his own room alone.''
 \end{quote}
 
 \begin{quote}
@@ -635,40 +641,40 @@ Niềm hưng phấn thẩm mỹ của việc so sánh hai mô hình này là s�
 \emph{Pascalian Aesthetic Dimensions}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Aesthetic Form} & \emph{Core Pascalian Concept} & \emph{Philosophical Resonance} \\
-\hline
+\midrule
 \emph{Dual Elegance} & \textit{Esprit de G\'eom\'etrie} vs. \textit{Esprit de Finesse} & The distinction between algorithmic deduction and intuitive, holistic judgment. \\
-\hline
+
 \emph{Noble Vulnerability} & \textit{Le Roseau Pensant} (The Thinking Reed) & Human dignity found in conscious awareness rather than physical scale or power. \\
-\hline
+
 \emph{The Un-distracted Sublime} & \textit{Divertissement} vs. \textit{Le Silence \'Eternel} & Facing the terrifying, silent universe without seeking refuge in petty noise. \\
-\hline
+
 \emph{The Game-Theoretic Leap} & \textit{Le Pari} (The Wager) & Making meaningful, high-stakes decisions under conditions of incomplete information. \\
-\hline
+
 \emph{Rational Humility} & Reason's Limit (\textit{Le C\oe ur}) & The intellect's willingness to recognize truths that transcend formal proof. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
 \emph{Các Chiều kích Thẩm mỹ Pascal}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Hình thái Thẩm mỹ (Aesthetic Form)} & \emph{Khái niệm Cốt lõi của Pascal (Core Pascalian Concept)} & \emph{Sự Cộng hưởng Triết học (Philosophical Resonance)} \\
-\hline
+\midrule
 \emph{Sự thanh lịch Kép (Dual Elegance)} & \textit{Esprit de G\'eom\'etrie} vs. \textit{Esprit de Finesse} & Sự phân biệt giữa phép diễn dịch thuật toán \& những phán đoán trực giác, mang tính toàn thể. \\
-\hline
+
 \emph{Sự Tổn thương Cao quý (Noble Vulnerability)} & \textit{Le Roseau Pensant} (Cây sậy biết tư duy) & Phẩm giá con người được tìm thấy trong nhận thức có ý thức thay vì trong quy mô vật lý hay sức mạnh. \\
-\hline
+
 \emph{Sự Thăng hoa Phi xao nhãng (The Un-distracted Sublime)} & \textit{Divertissement} vs. \textit{Le Silence \'Eternel} & Đối mặt với vũ trụ tĩnh lặng, đáng kinh hãi mà không tìm kiếm nơi nương náu trong những tiếng ồn vụn vặt. \\
-\hline
+
 \emph{Cú Nhảy vọt Lý thuyết Trò chơi (The Game-Theoretic Leap)} & \textit{Le Pari} (Cuộc cá cược) & Đưa ra những quyết định có ý nghĩa, mang tính đặt cược cao dưới những điều kiện thông tin không đầy đủ. \\
-\hline
+
 \emph{Sự Khiêm nhường Lý trí (Rational Humility)} & Giới hạn của Lý trí (\textit{Le C\oe ur}) & Sự sẵn sàng của trí tuệ trong việc thừa nhận những chân lý siêu việt khỏi mọi phép chứng minh hình thức. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -686,11 +692,16 @@ Cốt lõi trong triết học toán học của Tao là công thức nổi ti�
 
 \begin{enumerate}
     \item \emph{The Pre-Rigorous Stage:} The apprentice works with informal intuition, geometric metaphors, and uncalibrated computation, possessing a fuzzy sense of \textit{why} something works without the formal syntax to prove it.
-    \item \emph{Giai đoạn Tiền-nghiêm ngặt (The Pre-Rigorous Stage):} Người tập sự làm việc với trực giác phi chính thức, những ẩn dụ hình học, \& tính toán không được hiệu chuẩn, sở hữu 1 cảm giác lờ mờ về \textit{tại sao} 1 thứ gì đó lại hoạt động mà không có cú pháp hình thức để chứng minh nó.
-    \item \emph{The Rigorous Stage:} The student learns the strict, unforgiving machinery of formal proofs, $\epsilon$-$\delta$ limit definitions, measure theory, and abstract algebra. Here, the mind is forced into a rigid logical cage, often losing its initial intuitive spark as it becomes preoccupied with avoiding formal errors.
-    \item \emph{Giai đoạn Nghiêm ngặt (The Rigorous Stage):} Người học trò học về bộ máy nghiêm ngặt, không khoan nhượng của các phép chứng minh hình thức, các định nghĩa giới hạn $\epsilon$-$\delta$, lý thuyết độ đo, \& đại số trừu tượng. Tại đây, tâm trí bị ép buộc vào 1 cái lồng logic cứng nhắc, thường đánh mất đi tia lửa trực giác ban đầu của nó khi nó trở nên bận bịu với việc tránh né các sai sót hình thức.
-    \item \emph{The Post-Rigorous Stage:} The master, having thoroughly internalized formal rigor until it operates at the level of muscle memory, reclaims their intuitive freedom. Rigor ceases to be a restrictive cage and becomes an invisible, frictionless safety net. The mathematician can once again think in sweeping physical metaphors, water waves, and geometric flows, confident that their instincts can be converted back into airtight formal estimates on demand.
-    \item \emph{Giai đoạn Hậu-nghiêm ngặt (The Post-Rigorous Stage):} Bậc thầy, sau khi đã nội tâm hóa hoàn toàn tính nghiêm ngặt hình thức cho đến khi nó hoạt động ở cấp độ bộ nhớ cơ bắp (muscle memory), đòi lại sự tự do trực giác của họ. Tính nghiêm ngặt không còn là 1 cái lồng trói buộc mà trở thành 1 mạng lưới an toàn vô hình, phi ma sát. Nhà toán học 1 lần nữa có thể suy nghĩ bằng những ẩn dụ vật lý quét qua diện rộng, những sóng nước, \& những dòng chảy hình học, tự tin rằng những bản năng của họ có thể được chuyển đổi ngược trở lại thành những ước lượng hình thức kín kẽ theo yêu cầu.
+
+\item \emph{Giai đoạn Tiền-nghiêm ngặt (The Pre-Rigorous Stage):} Người tập sự làm việc với trực giác phi chính thức, những ẩn dụ hình học, \& tính toán không được hiệu chuẩn, sở hữu 1 cảm giác lờ mờ về \textit{tại sao} 1 thứ gì đó lại hoạt động mà không có cú pháp hình thức để chứng minh nó.
+
+\item \emph{The Rigorous Stage:} The student learns the strict, unforgiving machinery of formal proofs, $\epsilon$-$\delta$ limit definitions, measure theory, and abstract algebra. Here, the mind is forced into a rigid logical cage, often losing its initial intuitive spark as it becomes preoccupied with avoiding formal errors.
+
+\item \emph{Giai đoạn Nghiêm ngặt (The Rigorous Stage):} Người học trò học về bộ máy nghiêm ngặt, không khoan nhượng của các phép chứng minh hình thức, các định nghĩa giới hạn $\epsilon$-$\delta$, lý thuyết độ đo, \& đại số trừu tượng. Tại đây, tâm trí bị ép buộc vào 1 cái lồng logic cứng nhắc, thường đánh mất đi tia lửa trực giác ban đầu của nó khi nó trở nên bận bịu với việc tránh né các sai sót hình thức.
+
+\item \emph{The Post-Rigorous Stage:} The master, having thoroughly internalized formal rigor until it operates at the level of muscle memory, reclaims their intuitive freedom. Rigor ceases to be a restrictive cage and becomes an invisible, frictionless safety net. The mathematician can once again think in sweeping physical metaphors, water waves, and geometric flows, confident that their instincts can be converted back into airtight formal estimates on demand.
+
+\item \emph{Giai đoạn Hậu-nghiêm ngặt (The Post-Rigorous Stage):} Bậc thầy, sau khi đã nội tâm hóa hoàn toàn tính nghiêm ngặt hình thức cho đến khi nó hoạt động ở cấp độ bộ nhớ cơ bắp (muscle memory), đòi lại sự tự do trực giác của họ. Tính nghiêm ngặt không còn là 1 cái lồng trói buộc mà trở thành 1 mạng lưới an toàn vô hình, phi ma sát. Nhà toán học 1 lần nữa có thể suy nghĩ bằng những ẩn dụ vật lý quét qua diện rộng, những sóng nước, \& những dòng chảy hình học, tự tin rằng những bản năng của họ có thể được chuyển đổi ngược trở lại thành những ước lượng hình thức kín kẽ theo yêu cầu.
 \end{enumerate}
 
 Tao's aesthetic is the supreme expression of this post-rigorous state. He approaches a problem not as a formal auditor checking line-by-line syntax, but as a fluid physicist inspecting a dynamic system from multiple viewpoints simultaneously.
@@ -706,9 +717,12 @@ Nơi mà những chuyên gia truyền thống làm chủ ngôn ngữ bản đị
     \item \emph{The Green-Tao Theorem (2004):} Proving that the prime numbers contain arbitrarily long arithmetic progressions (e.g., sequences of primes with equal spacing like 3, 7, 11 or 5, 11, 17, 23). Rather than relying solely on traditional analytic number theory, Tao and Ben Green forged an impossible bridge between number theory, harmonic analysis, ergodic theory, and additive combinatorics, treating the distribution of primes not as a static list of integers, but as a noisy signal containing structured wave patterns.\footnote{Specifically, Green and Tao proved that the set of prime numbers is ``dense'' in a pseudo-random sense within the integers, allowing them to apply a transference principle to Szemer\'edi's Theorem (which states that any subset of integers with positive upper density contains arbitrarily long arithmetic progressions). The breakthrough required viewing prime distributions simultaneously through the lens of ergodic theory (dynamical systems), Fourier analysis (spectral frequencies), and extremal combinatorics.
     	
     	\textsf{Bản dịch:} Cụ thể, Green \& Tao đã chứng minh rằng tập hợp các số nguyên tố là ``trù mật'' (dense) theo 1 nghĩa giả ngẫu nhiên bên trong các số nguyên, cho phép họ áp dụng 1 nguyên lý chuyển giao (transference principle) lên Định lý Szemer\'edi (định lý phát biểu rằng bất kỳ tập con nào của các số nguyên có mật độ trên (upper density) dương đều chứa những cấp số cộng dài tùy ý). Bước đột phá này đòi hỏi phải quan sát các phân bố số nguyên tố đồng thời qua lăng kính của lý thuyết ergodic (các hệ động lực), giải tích Fourier (các tần số phổ), \& tổ hợp cực trị (extremal combinatorics).}
-    \item \emph{Định lý Green-Tao (2004):} Chứng minh rằng các số nguyên tố chứa những cấp số cộng dài tùy ý (ví dụ: các chuỗi số nguyên tố có khoảng cách bằng nhau như 3, 7, 11 hay 5, 11, 17, 23). Thay vì chỉ hoàn toàn dựa vào lý thuyết số giải tích truyền thống, Tao \& Ben Green đã rèn nên 1 cây cầu không tưởng nối liền lý thuyết số, giải tích điều hòa (harmonic analysis), lý thuyết ergodic, \& tổ hợp cộng tính (additive combinatorics), xử lý sự phân bố của các số nguyên tố không phải như 1 danh sách các số nguyên tĩnh tại, mà như 1 tín hiệu nhiễu chứa đựng các cấu trúc dạng sóng (wave patterns).
-    \item \emph{Navier-Stokes and Fluid Blowup:} In analyzing the millennium-scale question of whether the 3D Navier-Stokes equations can develop finite-time singularities (blowup), Tao constructed a thought experiment involving a ``hydraulic computer'', showing how the non-linear terms of the fluid equations could, in principle, be programmed to build logic gates out of water currents, transferring kinetic energy down to infinitely small scales until the continuum breaks down.
-    \item \emph{Navier-Stokes \& Sự bùng nổ Chất lưu (Fluid Blowup):} Khi phân tích câu hỏi quy mô thiên niên kỷ về việc liệu các phương trình Navier-Stokes 3D có thể phát triển các điểm kỳ dị trong thời gian hữu hạn (finite-time singularities - blowup) hay không, Tao đã kiến tạo 1 thí nghiệm tư tưởng liên quan đến 1 ``cỗ máy tính thủy lực'' (hydraulic computer), cho thấy các số hạng phi tuyến tính của các phương trình chất lưu, về nguyên tắc, có thể được lập trình như thế nào để xây dựng nên các cổng logic từ các dòng nước, chuyển giao động năng xuống những quy mô nhỏ vô hạn cho đến khi thể liên tục bị phá vỡ.
+
+\item \emph{Định lý Green-Tao (2004):} Chứng minh rằng các số nguyên tố chứa những cấp số cộng dài tùy ý (ví dụ: các chuỗi số nguyên tố có khoảng cách bằng nhau như 3, 7, 11 hay 5, 11, 17, 23). Thay vì chỉ hoàn toàn dựa vào lý thuyết số giải tích truyền thống, Tao \& Ben Green đã rèn nên 1 cây cầu không tưởng nối liền lý thuyết số, giải tích điều hòa (harmonic analysis), lý thuyết ergodic, \& tổ hợp cộng tính (additive combinatorics), xử lý sự phân bố của các số nguyên tố không phải như 1 danh sách các số nguyên tĩnh tại, mà như 1 tín hiệu nhiễu chứa đựng các cấu trúc dạng sóng (wave patterns).
+
+\item \emph{Navier-Stokes and Fluid Blowup:} In analyzing the millennium-scale question of whether the 3D Navier-Stokes equations can develop finite-time singularities (blowup), Tao constructed a thought experiment involving a ``hydraulic computer'', showing how the non-linear terms of the fluid equations could, in principle, be programmed to build logic gates out of water currents, transferring kinetic energy down to infinitely small scales until the continuum breaks down.
+
+\item \emph{Navier-Stokes \& Sự bùng nổ Chất lưu (Fluid Blowup):} Khi phân tích câu hỏi quy mô thiên niên kỷ về việc liệu các phương trình Navier-Stokes 3D có thể phát triển các điểm kỳ dị trong thời gian hữu hạn (finite-time singularities - blowup) hay không, Tao đã kiến tạo 1 thí nghiệm tư tưởng liên quan đến 1 ``cỗ máy tính thủy lực'' (hydraulic computer), cho thấy các số hạng phi tuyến tính của các phương trình chất lưu, về nguyên tắc, có thể được lập trình như thế nào để xây dựng nên các cổng logic từ các dòng nước, chuyển giao động năng xuống những quy mô nhỏ vô hạn cho đến khi thể liên tục bị phá vỡ.
 \end{itemize}
 
 \begin{center}
@@ -748,36 +762,36 @@ Thông qua blog của mình (\textit{What's New}) \& vai trò lãnh đạo trong
 \emph{Comparison of the Major Archetypes}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Dimension} & \emph{Alexander Grothendieck} & \emph{Terence Tao} \\
-\hline
+\midrule
 \emph{Strategy} & \emph{Monolithic Submersion:} Builds a single, massive abstract machinery (schemes, toposes) to dissolve problems. & \emph{Pragmatic Translation:} Uses whatever tool works; maps problems dynamically between PDE, number theory, and combinatorics. \\
-\hline
+
 \emph{Relation to Rigor} & Redefines space and foundations to make rigor synonymous with geometric tautology. & \emph{Post-Rigorous:} Uses high-level physical intuition backed by fluid, instant mastery of hard analysis bounds. \\
-\hline
+
 \emph{Working Mode} & Solitary, uncompromising hermitage; complete rejection of human compromise. & Collaborative, open-source, public blogging (Polymath); democratizing higher math. \\
-\hline
+
 \emph{Primary Aesthetic} & Oceanic, categorical unity. & Multi-scale, post-rigorous fluidity. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
 \emph{Sự So sánh các Nguyên mẫu Chính}
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
+\begin{tabular}{@{}p{3cm}p{6cm}p{6cm}@{}}
+\toprule
 \emph{Chiều kích (Dimension)} & \emph{Alexander Grothendieck} & \emph{Terence Tao} \\
-\hline
+\midrule
 \emph{Chiến lược (Strategy)} & \emph{Sự chìm ngập Nguyên khối (Monolithic Submersion):} Xây dựng 1 cỗ máy trừu tượng, khổng lồ duy nhất (các lược đồ, topos) để hòa tan các bài toán. & \emph{Sự thông dịch Thực dụng (Pragmatic Translation):} Sử dụng bất cứ công cụ nào hiệu quả; ánh xạ các bài toán 1 cách động lực giữa PDE, lý thuyết số, \& tổ hợp. \\
-\hline
+
 \emph{Mối quan hệ với Tính nghiêm ngặt (Relation to Rigor)} & Tái định nghĩa không gian \& các nền tảng để biến tính nghiêm ngặt trở nên đồng nghĩa với hằng đúng hình học (geometric tautology). & \emph{Hậu-nghiêm ngặt (Post-Rigorous):} Sử dụng trực giác vật lý bậc cao được hậu thuẫn bởi sự làm chủ trôi chảy, tức thời đối với các giới hạn giải tích khó. \\
-\hline
+
 \emph{Chế độ Làm việc (Working Mode)} & Đơn độc, ẩn dật không khoan nhượng; bác bỏ hoàn toàn sự thỏa hiệp của con người. & Hợp tác, mã nguồn mở, viết blog công khai (Polymath); dân chủ hóa toán học bậc cao. \\
-\hline
+
 \emph{Tính thẩm mỹ Chính (Primary Aesthetic)} & Sự thống nhất phạm trù, mang tính đại dương. & Tính chất lưu hậu-nghiêm ngặt, đa tỷ lệ. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -786,11 +800,11 @@ We map the universe's mechanics (its parsimony, its physical minimums, its emerg
 
 Chúng ta lập bản đồ cơ học của vũ trụ (sự tiết kiệm của nó, những cực tiểu vật lý của nó, sự hỗn mang trồi hiện của nó) nhưng 1 định luật vật lý không sở hữu vẻ đẹp nào trong chân không. Một đàn sáo đá uốn lượn (starling murmuration) không biết rằng nó đẹp; nó chỉ biết rằng nó đang tránh 1 vụ va chạm giữa không trung. Do đó, tính thẩm mỹ của nhân loại, là nét duyên dáng tĩnh lặng, bướng bỉnh của kẻ quan sát: 1 sinh vật sinh học được cấu thành từ tính chất hóa học dễ phân hủy, đang ngồi dưới ánh đèn huỳnh quang nỗ lực áp đặt trật tự lên sự vô hạn.
 
-This aesthetic is most visible at the boundary where rigid abstraction collides with human fatigue. You see it when staring at a terminal window at two in the morning, hunting down a structural error in an algorithmic model, only to discover a tragicomic data type conflict, a continuous cost expression stubbornly trying to inhabit an integer definition.\footnote{There is a specific, highly concentrated form of existential dread that accompanies debugging these kinds of data type conflicts. You spend hours questioning the fundamental logic of your continuous model, doubting the very theoretical bedrock of your mathematical formulation, only to realize the error is not philosophical, but typographical. The machine was not rejecting your logic; it was simply, rigidly pointing out that you cannot store a continuous floating-point cost expression inside a memory block explicitly declared as an integer. The resulting wave of relief, instantly followed by profound self-loathing, is arguably the most universal human experience in modern computational science.
+This aesthetic is most visible at the boundary where rigid abstraction collides with human fatigue. This aesthetic brutally manifests when staring into the void of a terminal window at two in the morning. You hunt down a perceived collapse in your mathematical architecture, only to uncover a profoundly humiliating data type conflict: a continuous cost expression stubbornly demanding asylum inside a discrete integer definition.\footnote{There is a highly toxic, concentrated form of existential dread reserved exclusively for this breed of debugging. You surrender hours to interrogating the metaphysical bedrock of your algorithmic model, convinced you have committed a grave offense against mathematics itself, only to discover the failure is not philosophical, but purely typographical. The compiler was never challenging your intellect; it was merely, with sociopathic indifference, pointing out that an infinite continuum of floating-point numbers cannot physically be shoved into an integer memory block. The subsequent wave of relief, instantly devoured by an abyss of self-loathing, is arguably the most unifying human experience in computational science.
 	
-	\textsf{Bản dịch:} Có 1 hình thái nỗi sợ hãi hiện sinh đặc thù, cô đặc cao độ đi kèm với việc gỡ lỗi (debugging) những kiểu xung đột kiểu dữ liệu như thế này. Bạn dành hàng giờ đồng hồ để chất vấn logic nền tảng của mô hình liên tục của mình, nghi ngờ chính cái lớp đá lý thuyết nền tảng trong công thức toán học của bạn, chỉ để nhận ra rằng lỗi lầm không mang tính triết học, mà mang tính đánh máy (typographical). Cỗ máy đã không hề bác bỏ logic của bạn; nó chỉ đơn giản, 1 cách cứng nhắc, chỉ ra rằng bạn không thể lưu trữ 1 biểu thức chi phí dấu phẩy động (floating-point) liên tục bên trong 1 khối bộ nhớ được khai báo hiển ngôn là 1 số nguyên. Làn sóng nhẹ nhõm theo sau đó, ngay lập tức được nối tiếp bởi 1 sự tự thù ghét bản thân sâu sắc, được cho là trải nghiệm mang tính con người phổ quát nhất trong khoa học điện toán hiện đại.} The universe is indifferent to this mismatch, and the compiler halts without prejudice. But the human mind cares. We find a resilient beauty in correcting the discrepancy, in the grueling labor of translating the continuous sprawl of human intention into the strict syntax of a machine.
+	\textsf{Bản dịch:} Có một hình thái nỗi sợ hãi hiện sinh độc hại, cô đặc cao độ được dành riêng cho chủng loại gỡ lỗi (debugging) này. Bạn cống hiến hàng giờ đồng hồ để tra khảo tầng đá gốc siêu hình của mô hình thuật toán của mình, đinh ninh rằng mình đã phạm phải một tội ác tày trời chống lại chính toán học, chỉ để phát hiện ra sự thất bại không hề mang tính triết học, mà hoàn toàn mang tính đánh máy. Trình biên dịch chưa từng bao giờ thách thức trí tuệ của bạn; nó chỉ đơn thuần, với một sự thờ ơ mang tính ái kỷ bệnh hoạn (sociopathic indifference), chỉ ra rằng một thể liên tục vô hạn của các số dấu phẩy động (floating-point) không thể nào bị nhét gượng ép về mặt vật lý vào một khối bộ nhớ số nguyên. Làn sóng nhẹ nhõm theo sau đó, ngay lập tức bị nuốt chửng bởi một vực thẳm của sự tự thù ghét bản thân, có lẽ là trải nghiệm mang tính nhân loại hợp nhất (unifying) nhất trong khoa học điện toán.} The universe is indifferent to this mismatch, and the compiler halts without prejudice. But the human mind cares. We find a resilient beauty in correcting the discrepancy, in the grueling labor of translating the continuous sprawl of human intention into the strict syntax of a machine.
 
-Tính thẩm mỹ này hiện hữu rõ ràng nhất ở đường biên nơi sự trừu tượng cứng nhắc va chạm với sự mệt mỏi của con người. Bạn nhìn thấy nó khi nhìn chằm chằm vào 1 cửa sổ dòng lệnh (terminal) lúc hai giờ sáng, săn lùng 1 lỗi cấu trúc trong 1 mô hình thuật toán, để rồi phát hiện ra 1 sự xung đột kiểu dữ liệu bi hài, 1 biểu thức chi phí liên tục đang bướng bỉnh cố gắng trú ngụ trong 1 định nghĩa số nguyên. Vũ trụ thờ ơ với sự sai lệch này, \& trình biên dịch (compiler) thì dừng lại không chút định kiến. Nhưng tâm trí con người thì bận tâm. Chúng ta tìm thấy 1 vẻ đẹp kiên cường trong việc sửa chữa sự khác biệt, trong cái lao động kiệt quệ của việc phiên dịch sự ngổn ngang liên tục của ý định con người vào trong cú pháp nghiêm ngặt của 1 cỗ máy.
+Tính thẩm mỹ này hiện hữu rõ ràng nhất ở đường biên nơi sự trừu tượng cứng nhắc va chạm với sự mệt mỏi của con người. Tính thẩm mỹ này biểu lộ một cách tàn bạo khi ta nhìn chằm chằm vào khoảng không hư vô của một cửa sổ dòng lệnh (terminal) lúc hai giờ sáng. Bạn săn lùng một sự sụp đổ được giả định trong kiến trúc toán học của mình, chỉ để phơi bày một sự xung đột kiểu dữ liệu nhục nhã sâu sắc: một biểu thức chi phí liên tục đang bướng bỉnh đòi tị nạn bên trong một định nghĩa số nguyên rời rạc. Vũ trụ thờ ơ với sự sai lệch này, \& trình biên dịch (compiler) thì dừng lại không chút định kiến. Nhưng tâm trí con người thì bận tâm. Chúng ta tìm thấy 1 vẻ đẹp kiên cường trong việc sửa chữa sự khác biệt, trong cái lao động kiệt quệ của việc phiên dịch sự ngổn ngang liên tục của ý định con người vào trong cú pháp nghiêm ngặt của 1 cỗ máy.
 
 You see it again in the quiet act of evaluation. To sit before a stack of bachelor theses in software engineering or mathematics is rarely an exercise in uncovering pristine, Euler-level truths; it is an exercise in structural triage. The aesthetic here is not found in the flawless mathematical execution of the proposed algorithms, but in the earnest, flawed, and deeply human effort of the minds trying to build them. There is a profound grace in acting as the referee for someone else's unfinished thought, sifting through their cognitive friction, pointing out the structural gaps, and gently guiding them toward the exact floor and ceiling of a problem rather than letting them wander blindly through a bloated search space.
 
